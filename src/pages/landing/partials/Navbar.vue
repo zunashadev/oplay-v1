@@ -13,13 +13,23 @@ import AppLogo from "../../../components/app-logo/AppLogo.vue";
         <!-- End : Brand -->
 
         <!-- Start : Menu -->
-        <div class="flex items-center space-x-12">
-          <span class="font-medium text-base">Beranda</span>
-          <span class="font-medium text-base">Produk</span>
-          <span class="font-medium text-base">Cara Pesan</span>
-          <span class="font-medium text-base">Testimoni</span>
-          <span class="font-medium text-base">Laporan Kendala</span>
-        </div>
+        <ul class="flex items-center space-x-12">
+          <li>
+            <a href="#" class="font-medium text-base">Beranda</a>
+          </li>
+          <li>
+            <a href="#" class="font-medium text-base">Produk</a>
+          </li>
+          <li>
+            <a href="#" class="font-medium text-base">Cara Pesan</a>
+          </li>
+          <li>
+            <a href="#" class="font-medium text-base">Testimoni</a>
+          </li>
+          <li>
+            <a href="#" class="font-medium text-base">Laporan Kendala</a>
+          </li>
+        </ul>
         <!-- End : Menu -->
       </div>
     </div>

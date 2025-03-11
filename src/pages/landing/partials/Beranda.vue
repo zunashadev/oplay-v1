@@ -24,13 +24,10 @@ import searchIcon from "../../../components/icons/search.vue";
                   Selamat datang di
                   <span class="font-semibold text-lightning-yellow-400"> OPLAY, our play! </span>
                 </div>
-                <div class="font-semibold text-6xl/18">Jual Akun Digital Terpercaya dan Bla Bla Bla</div>
+                <div class="font-semibold text-6xl/18">Dapatkan Akun Premium dengan Harga Terjangkau !</div>
               </div>
 
-              <div class="font-normal text-base">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem dolor tempore est in inventore ipsum nesciunt deserunt rem. Aspernatur quos harum aliquam laborum? Nemo corporis mollitia explicabo sed
-                tenetur libero sunt ad eveniet reprehenderit! Saepe, omnis, sit voluptatibus, explicabo autem neque tempore sed voluptatem commodi culpa voluptas distinctio deleniti ad.
-              </div>
+              <div class="font-normal text-base">🚀 Netflix, Spotify, Canva, dan Lainnya - Langganan Tanpa Ribet, Langsung Aktif!</div>
             </div>
             <button class="flex space-x-3 items-center mx-auto bg-lightning-yellow-400 text-black px-6 py-3 font-semibold rounded-full">
               <span> Telusuri Produk </span>
