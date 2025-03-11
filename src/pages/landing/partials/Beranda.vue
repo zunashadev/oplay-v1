@@ -24,7 +24,7 @@ import searchIcon from "../../../components/icons/search.vue";
                   Selamat datang di
                   <span class="font-semibold text-lightning-yellow-400"> OPLAY, our play! </span>
                 </div>
-                <div class="font-semibold text-6xl">Jual Akun Digital Terpercaya dan Bla Bla Bla</div>
+                <div class="font-semibold text-6xl/18">Jual Akun Digital Terpercaya dan Bla Bla Bla</div>
               </div>
 
               <div class="font-normal text-base">
