@@ -20,7 +20,7 @@ import KeunggulanPartial from "./partials/Keunggulan.vue";
       <hr class="border-firefly-950" />
 
       <!-- Start : Produk -->
-      <div>Produk</div>
+      <!-- <div>Produk</div> -->
       <!-- End : Produk -->
 
       <hr class="border-firefly-950" />
