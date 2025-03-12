@@ -2,9 +2,11 @@ import { createWebHistory, createRouter } from "vue-router";
 
 import Landing from "../pages/landing/Landing.vue";
 import Dashboard from "../pages/dashboard/Dashboard.vue";
+import ComingSoon from "../pages/coming-soon/ComingSoon.vue";
 
 const routes = [
-  { path: "/", name: "Landing", component: Landing },
+  { path: "/", name: "ComingSoon", component: ComingSoon },
+  { path: "/landing", name: "Landing", component: Landing },
   { path: "/dashboard", name: "Dashboard", component: Dashboard },
 ];
 

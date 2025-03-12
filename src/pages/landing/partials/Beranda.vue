@@ -26,10 +26,10 @@ import searchIcon from "../../../components/icons/search.vue";
 
               <div class="font-normal text-base">🚀 Netflix, Spotify, YouTube, dan Lainnya - Langganan Tanpa Ribet, Langsung Aktif!</div>
             </div>
-            <button class="flex space-x-3 items-center mx-auto bg-lightning-yellow-400 text-black px-6 py-3 font-semibold rounded-full">
+            <a href="#produk" class="flex space-x-3 items-center mx-auto w-fit bg-lightning-yellow-400 text-black px-6 py-3 font-semibold rounded-full">
               <span> Telusuri Produk </span>
               <searchIcon class="size-5" />
-            </button>
+            </a>
           </div>
           <!-- End : Content -->
         </div>
