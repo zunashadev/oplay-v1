@@ -32,7 +32,7 @@ import searchIcon from "../../../components/icons/search.vue";
             </div>
             <a
               href="#produk"
-              class="bg-lightning-yellow-400 mx-auto flex w-fit items-center space-x-3 rounded-full px-6 py-3 font-semibold text-black"
+              class="bg-lightning-yellow-400 hover:bg-lightning-yellow-600 mx-auto flex w-fit items-center space-x-3 rounded-full px-6 py-3 font-semibold text-black transition-all hover:text-white"
             >
               <span> Telusuri Produk </span>
               <searchIcon class="size-5" />
