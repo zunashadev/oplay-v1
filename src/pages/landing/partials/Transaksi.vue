@@ -15,19 +15,19 @@
       <!-- Snap Carousel -->
       <div class="w-2/3 max-w-full overflow-hidden">
         <div class="flex w-full snap-x snap-mandatory space-x-4 overflow-x-auto scroll-smooth p-4 whitespace-nowrap">
-          <div class="flex h-[600px] min-w-96 snap-start items-center justify-center bg-red-500 text-lg text-white">
+          <div class="flex h-[512px] min-w-96 snap-start items-center justify-center bg-red-500 text-lg text-white">
             1
           </div>
-          <div class="flex h-[600px] min-w-96 snap-start items-center justify-center bg-blue-500 text-lg text-white">
+          <div class="flex h-[512px] min-w-96 snap-start items-center justify-center bg-blue-500 text-lg text-white">
             2
           </div>
-          <div class="flex h-[600px] min-w-96 snap-start items-center justify-center bg-green-500 text-lg text-white">
+          <div class="flex h-[512px] min-w-96 snap-start items-center justify-center bg-green-500 text-lg text-white">
             3
           </div>
-          <div class="flex h-[600px] min-w-96 snap-start items-center justify-center bg-yellow-500 text-lg text-white">
+          <div class="flex h-[512px] min-w-96 snap-start items-center justify-center bg-yellow-500 text-lg text-white">
             4
           </div>
-          <div class="flex h-[600px] min-w-96 snap-start items-center justify-center bg-purple-500 text-lg text-white">
+          <div class="flex h-[512px] min-w-96 snap-start items-center justify-center bg-purple-500 text-lg text-white">
             5
           </div>
         </div>
