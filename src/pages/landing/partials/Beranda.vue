@@ -20,14 +20,11 @@ import searchIcon from "../../../components/icons/search.vue";
           <div class="space-y-20 text-center">
             <div class="flex flex-col space-y-12 text-center">
               <div class="flex flex-col space-y-4">
-                <div class="text-2xl font-medium">
-                  Selamat datang di
-                  <span class="font-semibold text-lightning-yellow-400"> OPLAY, our play! </span>
-                </div>
+                <div class="text-2xl font-medium"><span class="font-semibold text-lightning-yellow-400"> OPLAY</span>, our play!</div>
                 <div class="font-semibold text-6xl/18">Dapatkan Akun Premium dengan Harga Terjangkau !</div>
               </div>
 
-              <div class="font-normal text-base">🚀 Netflix, Spotify, Canva, dan Lainnya - Langganan Tanpa Ribet, Langsung Aktif!</div>
+              <div class="font-normal text-base">🚀 Netflix, Spotify, YouTube, dan Lainnya - Langganan Tanpa Ribet, Langsung Aktif!</div>
             </div>
             <button class="flex space-x-3 items-center mx-auto bg-lightning-yellow-400 text-black px-6 py-3 font-semibold rounded-full">
               <span> Telusuri Produk </span>
