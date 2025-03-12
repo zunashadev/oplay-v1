@@ -1,5 +1,7 @@
 <script setup></script>
 
 <template>
-  <h1>COMING SOON BRO</h1>
+  <div class="h-screen overflow-hidden bg-black flex justify-center items-center text-white">
+    <p>Coming Soon</p>
+  </div>
 </template>
