@@ -1,5 +1,43 @@
 <script setup>
+import { ref, onMounted } from "vue";
 import searchIcon from "../../../components/icons/search.vue";
+
+const text = "OPLAY, our play!";
+const displayedText = ref(""); // Tidak perlu spasi di awal
+let index = 0;
+let isDeleting = false;
+
+const typeEffect = () => {
+  if (!isDeleting) {
+    // Mengetik teks
+    if (index < text.length) {
+      displayedText.value += text[index];
+      index++;
+      setTimeout(typeEffect, 100); // Kecepatan mengetik
+    } else {
+      // Setelah selesai mengetik, tunggu 2 detik lalu mulai menghapus
+      setTimeout(() => {
+        isDeleting = true;
+        typeEffect();
+      }, 2000);
+    }
+  } else {
+    // Menghapus teks satu per satu
+    if (index > 0) {
+      displayedText.value = displayedText.value.slice(0, -1);
+      index--;
+      setTimeout(typeEffect, 50); // Kecepatan menghapus
+    } else {
+      // Setelah selesai menghapus, ulangi mengetik
+      isDeleting = false;
+      setTimeout(typeEffect, 500);
+    }
+  }
+};
+
+onMounted(() => {
+  typeEffect();
+});
 </script>
 <template>
   <div class="h-fit w-full bg-[url('/img/backgrounds/beranda-background.png')] bg-cover bg-center bg-no-repeat">
@@ -21,7 +59,9 @@ import searchIcon from "../../../components/icons/search.vue";
             <div class="flex flex-col space-y-12 text-center">
               <div class="flex flex-col space-y-4">
                 <div class="text-2xl font-medium">
-                  <span class="text-lightning-yellow-400 font-semibold"> OPLAY, our play!</span>
+                  <span class="text-lightning-yellow-400 font-semibold">
+                    {{ displayedText }}<span class="inline-block w-[1ch]"></span>
+                  </span>
                 </div>
                 <div class="text-6xl/18 font-bold">Dapatkan Akun Premium dengan Harga Terjangkau !</div>
               </div>
@@ -32,7 +72,7 @@ import searchIcon from "../../../components/icons/search.vue";
             </div>
             <a
               href="#produk"
-              class="bg-lightning-yellow-400 hover:bg-lightning-yellow-600 mx-auto flex w-fit items-center space-x-3 rounded-full px-6 py-3 font-semibold text-black transition-all hover:text-white"
+              class="bg-lightning-yellow-400 hover:bg-lightning-yellow-500 hover:outline-lightning-yellow-400 mx-auto flex w-fit items-center space-x-3 rounded-full px-6 py-3 font-semibold text-black transition-all hover:outline hover:outline-offset-4"
             >
               <span> Telusuri Produk </span>
               <searchIcon class="size-5" />
