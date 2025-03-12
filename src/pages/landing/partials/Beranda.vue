@@ -7,8 +7,8 @@ import searchIcon from "../../../components/icons/search.vue";
       <div class="px-24 py-24 max-w-7xl mx-auto">
         <div class="relative">
           <!-- Start : Decoration -->
-          <img src="/img/illustrations/youtube.png" class="absolute -top-12 left-40 w-14 h-auto" />
-          <img src="/img/illustrations/spotify.png" class="absolute -top-12 right-40 w-12 h-auto" />
+          <img src="/img/illustrations/youtube.png" class="absolute -top-8 left-48 w-14 h-auto" />
+          <img src="/img/illustrations/spotify.png" class="absolute -top-8 right-48 w-12 h-auto" />
           <img src="/img/illustrations/game.png" class="absolute bottom-2 left-72 w-14 h-auto" />
           <img src="/img/illustrations/netflix.png" class="absolute bottom-4 right-72 w-12 h-auto" />
 
@@ -21,7 +21,7 @@ import searchIcon from "../../../components/icons/search.vue";
             <div class="flex flex-col space-y-12 text-center">
               <div class="flex flex-col space-y-4">
                 <div class="text-2xl font-medium"><span class="font-semibold text-lightning-yellow-400"> OPLAY</span>, our play!</div>
-                <div class="font-semibold text-6xl/18">Dapatkan Akun Premium dengan Harga Terjangkau !</div>
+                <div class="font-semibold text-5xl/18">Dapatkan Akun Premium dengan Harga Terjangkau !</div>
               </div>
 
               <div class="font-normal text-base">🚀 Netflix, Spotify, YouTube, dan Lainnya - Langganan Tanpa Ribet, Langsung Aktif!</div>
