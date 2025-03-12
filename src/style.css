@@ -2,9 +2,17 @@
 
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Lobster Fugu";
+  src: url("/fonts/LobsterFuguRegular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 @theme {
   /* Start : Font */
   --font-poppins: "Poppins", sans-serif;
+  --font-lobster-fugu: "Lobster Fugu", cursive; /* Gunakan font secara benar */
   /* End : Font */
 
   /* Start : Color */
