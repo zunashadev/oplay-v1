@@ -1,12 +1,9 @@
 <script setup>
-import { ref } from "vue";
 import AppLogo from "../../../components/app-logo/AppLogo.vue";
 
-const activeMenu = ref("beranda");
-
-const setActiveMenu = (menu) => {
-  activeMenu.value = menu;
-};
+defineProps({
+  activeMenu: String, // Terima activeMenu dari Layout.vue
+});
 </script>
 <template>
   <div class="fixed top-0 right-0 left-0 z-50 w-full px-20 pt-6">
@@ -24,7 +21,6 @@ const setActiveMenu = (menu) => {
           <li>
             <a
               href="#beranda"
-              @click="setActiveMenu('beranda')"
               class="text-base font-medium transition-all"
               :class="
                 activeMenu === 'beranda'
@@ -38,7 +34,6 @@ const setActiveMenu = (menu) => {
           <li>
             <a
               href="#keunggulan"
-              @click="setActiveMenu('keunggulan')"
               class="text-base font-medium transition-all"
               :class="
                 activeMenu === 'keunggulan'
@@ -51,7 +46,6 @@ const setActiveMenu = (menu) => {
           <li>
             <a
               href="#produk"
-              @click="setActiveMenu('produk')"
               class="text-base font-medium transition-all"
               :class="
                 activeMenu === 'produk'
@@ -64,7 +58,6 @@ const setActiveMenu = (menu) => {
           <li>
             <a
               href="#"
-              @click="setActiveMenu('cara-pesan')"
               class="text-base font-medium transition-all"
               :class="
                 activeMenu === 'cara-pesan'
@@ -77,7 +70,6 @@ const setActiveMenu = (menu) => {
           <li>
             <a
               href="#transaksi"
-              @click="setActiveMenu('transaksi')"
               class="text-base font-medium transition-all"
               :class="
                 activeMenu === 'transaksi'
@@ -90,7 +82,6 @@ const setActiveMenu = (menu) => {
           <li>
             <a
               href="#"
-              @click="setActiveMenu('laporan-kendala')"
               class="text-base font-medium transition-all"
               :class="
                 activeMenu === 'laporan-kendala'
