@@ -51,7 +51,7 @@ const productList = ref([
 </script>
 
 <template>
-  <div class="flex flex-col space-y-8 p-16 bg-blue-charcoal-950 border border-firefly-950 rounded-4xl">
+  <div class="bg-blue-charcoal-950 border-firefly-950 flex flex-col space-y-8 rounded-4xl border p-16">
     <p class="text-4xl font-semibold">DAFTAR PRODUK</p>
     <div class="flex flex-col space-y-8">
       <!-- Start : Search and Filters -->
@@ -60,10 +60,10 @@ const productList = ref([
 
       <!-- Start : Products -->
       <div class="grid grid-cols-5 gap-6">
-        <div v-for="(product, index) in productList" :key="index" class="bg-white text-black rounded-xl">
+        <div v-for="(product, index) in productList" :key="index" class="rounded-xl bg-white text-black">
           <!-- App Name & Logo -->
-          <div class="flex flex-col space-y-4 h-32 items-center justify-center border-b border-b-firefly-950">
-            <img :src="`/img/product-logos/${product.logo}`" class="w-auto max-h-10" />
+          <div class="border-b-firefly-950 flex h-32 flex-col items-center justify-center space-y-4 border-b">
+            <img :src="`/img/product-logos/${product.logo}`" class="max-h-10 w-auto" />
             <p class="text-base font-medium">{{ product.nama }}</p>
           </div>
           <!-- Package Type -->
@@ -75,7 +75,11 @@ const productList = ref([
           </div>
           <!-- Order Button -->
           <div class="px-3 pb-3">
-            <a href="https://wa.me/6285117247636?text=Halo%20saya%20tertarik%20dengan%20produk%20Anda" target="blank" class="block text-center bg-lightning-yellow-400 w-full rounded-lg px-4 py-2 font-medium">
+            <a
+              href="https://wa.me/6285117247636?text=Halo%20saya%20tertarik%20dengan%20produk%20Anda"
+              target="blank"
+              class="bg-lightning-yellow-400 block w-full rounded-lg px-4 py-2 text-center font-medium"
+            >
               Pesan Sekarang
             </a>
           </div>
