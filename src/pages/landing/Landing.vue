@@ -3,6 +3,7 @@ import Layout from "./layouts/Layout.vue";
 import BerandaPartial from "./partials/Beranda.vue";
 import KeunggulanPartial from "./partials/Keunggulan.vue";
 import ProdukPartial from "./partials/Produk.vue";
+import TransaksiPartial from "./partials/Transaksi.vue";
 </script>
 
 <template>
@@ -24,13 +25,16 @@ import ProdukPartial from "./partials/Produk.vue";
       <ProdukPartial id="produk" />
       <!-- End : Produk -->
 
-      <hr class="border-firefly-950" />
+      <!-- <hr class="border-firefly-950" /> -->
 
       <!-- Start : Cara Pesan -->
       <!-- End : Cara Pesan -->
 
-      <!-- Start : Testimoni -->
-      <!-- End : Testimoni -->
+      <hr class="border-firefly-950" />
+
+      <!-- Start : Transaksi -->
+      <TransaksiPartial id="transaksi" />
+      <!-- End : Transaksi -->
     </div>
   </Layout>
 </template>
