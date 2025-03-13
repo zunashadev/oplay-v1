@@ -87,7 +87,7 @@ onMounted(() => {
                 <div
                   class="from-lightning-yellow-100 to-firefly-100 bg-gradient-to-tl bg-clip-text text-3xl/10 font-bold text-transparent sm:text-4xl/12 md:text-5xl/16 lg:text-6xl/18"
                 >
-                  Dapatkan Akun Premium dengan Harga Terjangkau !
+                  Dapatkan Akun Premium dengan Harga Terjangkau
                 </div>
               </div>
               <div class="text-sm font-normal sm:text-base">
