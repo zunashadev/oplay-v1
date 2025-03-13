@@ -70,7 +70,7 @@ const openWhatsApp = (product, packageType) => {
 </script>
 
 <template>
-  <div class="bg-blue-charcoal-950 border-firefly-950 flex flex-col space-y-8 rounded-4xl border p-6 sm:p-16">
+  <div class="bg-blue-charcoal-950 border-firefly-950 flex flex-col space-y-8 rounded-4xl border p-6 sm:p-8 md:p-16">
     <p class="mx-auto text-2xl font-semibold sm:mx-0 sm:text-3xl md:text-4xl">DAFTAR PRODUK</p>
     <div class="flex flex-col space-y-8">
       <!-- Start : Search and Filters -->
@@ -79,9 +79,13 @@ const openWhatsApp = (product, packageType) => {
 
       <!-- Start : Products -->
       <div
-        class="grid grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-4 md:gap-6 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5"
+        class="grid grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-6 md:gap-8 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5"
       >
-        <div v-for="(product, index) in productList" :key="index" class="rounded-xl bg-white text-black">
+        <div
+          v-for="(product, index) in productList"
+          :key="index"
+          class="from-lightning-yellow-50 to-firefly-50 rounded-xl bg-gradient-to-tl text-black"
+        >
           <!-- App Name & Logo -->
           <div
             class="border-b-firefly-950 flex h-28 flex-col items-center justify-center space-y-2 border-b px-2 sm:h-32 sm:space-y-4"
@@ -90,13 +94,15 @@ const openWhatsApp = (product, packageType) => {
             <p class="text-center text-base font-medium">{{ product.nama }}</p>
           </div>
           <!-- Package Type -->
-          <div class="flex flex-col space-y-2 px-3 py-6 sm:space-y-3">
+          <div class="flex flex-col space-y-1 px-3 py-6 sm:space-y-2">
             <div
               v-for="(packageType, index) in product.jenisPaket"
               :key="index"
-              class="flex items-center justify-between"
+              class="flex items-center justify-between space-x-6"
             >
-              <div class="flex flex-col sm:space-y-1">
+              <div
+                class="-ml-6 flex w-full flex-col rounded-l-xl rounded-r-full bg-gray-950/10 py-1.5 pr-4 pl-4 shadow-sm backdrop-blur-sm"
+              >
                 <span class="text-xs font-normal">{{ packageType.nama }}</span>
                 <p class="text-base font-medium">{{ packageType.harga }}</p>
               </div>
@@ -104,7 +110,7 @@ const openWhatsApp = (product, packageType) => {
               <!-- Order Button -->
               <button
                 @click="openWhatsApp(product, packageType)"
-                class="bg-lightning-yellow-400 rounded-lg px-4 py-2 text-center font-medium hover:cursor-pointer"
+                class="bg-lightning-yellow-400 hover:bg-lightning-yellow-500 rounded-lg px-4 py-2 text-center font-medium transition-all hover:cursor-pointer"
               >
                 Pesan
               </button>

@@ -29,78 +29,98 @@ defineProps({
 
           <!-- Start : Menu Content -->
           <ul class="hidden items-center space-x-12 xl:flex">
-            <li>
+            <li class="relative flex flex-col items-start">
               <a
                 href="#beranda"
                 class="text-base font-medium transition-all"
                 :class="
-                  activeMenu === 'beranda'
-                    ? 'text-lightning-yellow-400 hover:text-lightning-yellow-500'
-                    : 'hover:text-lightning-yellow-400 text-white'
+                  activeMenu === 'beranda' ? 'text-lightning-yellow-400' : 'hover:text-lightning-yellow-400 text-white'
                 "
               >
                 Beranda
               </a>
+              <div
+                class="absolute -bottom-1.5 h-0.5 w-4 rounded-full transition-all"
+                :class="activeMenu === 'beranda' ? 'bg-lightning-yellow-400' : 'bg-none'"
+              ></div>
             </li>
-            <li>
+            <li class="relative flex flex-col items-start">
               <a
                 href="#keunggulan"
                 class="text-base font-medium transition-all"
                 :class="
                   activeMenu === 'keunggulan'
-                    ? 'text-lightning-yellow-400 hover:text-lightning-yellow-500'
+                    ? 'text-lightning-yellow-400'
                     : 'hover:text-lightning-yellow-400 text-white'
                 "
                 >Keunggulan
               </a>
+              <div
+                class="absolute -bottom-1.5 h-0.5 w-4 rounded-full transition-all"
+                :class="activeMenu === 'keunggulan' ? 'bg-lightning-yellow-400' : 'bg-none'"
+              ></div>
             </li>
-            <li>
+            <li class="relative flex flex-col items-start">
               <a
                 href="#produk"
                 class="text-base font-medium transition-all"
                 :class="
-                  activeMenu === 'produk'
-                    ? 'text-lightning-yellow-400 hover:text-lightning-yellow-500'
-                    : 'hover:text-lightning-yellow-400 text-white'
+                  activeMenu === 'produk' ? 'text-lightning-yellow-400' : 'hover:text-lightning-yellow-400 text-white'
                 "
                 >Produk
               </a>
+              <div
+                class="absolute -bottom-1.5 h-0.5 w-4 rounded-full transition-all"
+                :class="activeMenu === 'produk' ? 'bg-lightning-yellow-400' : 'bg-none'"
+              ></div>
             </li>
-            <li>
+            <li class="relative flex flex-col items-start">
               <a
                 href="#"
                 class="text-base font-medium transition-all"
                 :class="
                   activeMenu === 'cara-pesan'
-                    ? 'text-lightning-yellow-400 hover:text-lightning-yellow-500'
+                    ? 'text-lightning-yellow-400'
                     : 'hover:text-lightning-yellow-400 text-white'
                 "
                 >Cara Pesan
               </a>
+              <div
+                class="absolute -bottom-1.5 h-0.5 w-4 rounded-full transition-all"
+                :class="activeMenu === 'cara-pesan' ? 'bg-lightning-yellow-400' : 'bg-none'"
+              ></div>
             </li>
-            <li>
+            <li class="relative flex flex-col items-start">
               <a
                 href="#transaksi"
                 class="text-base font-medium transition-all"
                 :class="
                   activeMenu === 'transaksi'
-                    ? 'text-lightning-yellow-400 hover:text-lightning-yellow-500'
+                    ? 'text-lightning-yellow-400'
                     : 'hover:text-lightning-yellow-400 text-white'
                 "
                 >Transaksi
               </a>
+              <div
+                class="absolute -bottom-1.5 h-0.5 w-4 rounded-full transition-all"
+                :class="activeMenu === 'transaksi' ? 'bg-lightning-yellow-400' : 'bg-none'"
+              ></div>
             </li>
-            <li>
+            <li class="relative flex flex-col items-start">
               <a
                 href="#"
                 class="text-base font-medium transition-all"
                 :class="
                   activeMenu === 'laporan-kendala'
-                    ? 'text-lightning-yellow-400 hover:text-lightning-yellow-500'
+                    ? 'text-lightning-yellow-400'
                     : 'hover:text-lightning-yellow-400 text-white'
                 "
                 >Laporan Kendala
               </a>
+              <div
+                class="absolute -bottom-1.5 h-0.5 w-4 rounded-full transition-all"
+                :class="activeMenu === 'laporan-kendala' ? 'bg-lightning-yellow-400' : 'bg-none'"
+              ></div>
             </li>
           </ul>
           <!-- Start : Menu Content -->
