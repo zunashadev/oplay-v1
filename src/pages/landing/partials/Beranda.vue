@@ -55,10 +55,10 @@ onMounted(() => {
           <!-- End : Decoration -->
 
           <!-- Start : Content -->
-          <div class="space-y-20 text-center">
+          <div class="space-y-24 text-center sm:space-y-20">
             <!--  -->
-            <div class="flex flex-col space-y-12 text-center">
-              <div class="flex flex-col space-y-6 sm:space-y-4">
+            <div class="flex flex-col space-y-8 text-center sm:space-y-12">
+              <div class="flex flex-col space-y-4">
                 <div class="text-lg font-medium sm:text-xl md:text-2xl">
                   <span class="text-lightning-yellow-400 font-semibold">
                     {{ displayedText }}<span class="inline-block w-[1ch]"></span>
