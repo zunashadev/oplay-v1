@@ -71,9 +71,17 @@ const openWhatsApp = (product, packageType) => {
 
 <template>
   <div
-    class="bg-blue-charcoal-950 border-firefly-950 flex flex-col space-y-4 rounded-4xl border p-6 sm:space-y-6 sm:p-8 md:space-y-8 md:p-16"
+    class="bg-blue-charcoal-950 border-firefly-950 flex flex-col space-y-4 rounded-4xl border p-6 sm:space-y-6 sm:p-8 md:space-y-8 md:p-10"
   >
-    <p class="mx-auto text-2xl font-semibold sm:mx-0 sm:text-3xl md:text-4xl">DAFTAR PRODUK</p>
+    <div>
+      <p class="mx-auto text-2xl font-semibold sm:mx-0 sm:text-3xl md:text-4xl">DAFTAR PRODUK</p>
+      <p class="text-xs font-light sm:text-sm">
+        Produk yang anda cari tidak tersedia?
+        <span class="text-lightning-yellow-400 hover:cursor-pointer hover:underline"
+          >klik disini untuk mengajukan produk
+        </span>
+      </p>
+    </div>
     <div class="flex flex-col space-y-8">
       <!-- Start : Search and Filters -->
       <!-- <div>Fitur Cari dan Filter</div> -->
@@ -81,12 +89,12 @@ const openWhatsApp = (product, packageType) => {
 
       <!-- Start : Products -->
       <div
-        class="grid grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-6 md:gap-8 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5"
+        class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 md:gap-8 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5"
       >
         <div
           v-for="(product, index) in productList"
           :key="index"
-          class="from-lightning-yellow-50 to-firefly-50 rounded-xl bg-gradient-to-tl text-black"
+          class="from-lightning-yellow-50 to-firefly-50 rounded-xl bg-gradient-to-tl text-black transition-all hover:scale-105"
         >
           <!-- App Name & Logo -->
           <div
@@ -96,15 +104,19 @@ const openWhatsApp = (product, packageType) => {
             <p class="text-center text-base font-medium">{{ product.nama }}</p>
           </div>
           <!-- Package Type -->
-          <div class="flex flex-col space-y-1.5 px-2 py-4 sm:space-y-2">
+          <div
+            class="from-lightning-yellow-200 to-firefly-200 flex flex-col space-y-1.5 rounded-b-xl bg-gradient-to-tl px-2 py-4 sm:space-y-2"
+          >
             <div
               v-for="(packageType, index) in product.jenisPaket"
               :key="index"
-              class="flex items-center justify-between space-x-6"
+              class="flex items-center justify-between space-x-4"
             >
-              <div class="-ml-6 flex w-full flex-col rounded-xl bg-gray-950/10 px-6 py-1.5 shadow-sm backdrop-blur-sm">
-                <span class="text-xs font-normal">{{ packageType.nama }}</span>
-                <p class="text-base font-medium">{{ packageType.harga }}</p>
+              <div
+                class="bg-firefly-950/50 -ml-6 flex w-full flex-col rounded-xl px-5 py-1.5 shadow-sm backdrop-blur-sm"
+              >
+                <span class="text-xs font-light text-white">{{ packageType.nama }}</span>
+                <p class="text-base font-medium text-white">{{ packageType.harga }}</p>
               </div>
 
               <!-- Order Button -->
