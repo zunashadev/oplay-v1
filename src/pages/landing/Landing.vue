@@ -42,7 +42,7 @@ onUnmounted(() => {
 
 <template>
   <Layout :active-menu="activeMenu">
-    <div class="space-y-32">
+    <div class="space-y-20 sm:space-y-28 md:space-y-32">
       <!-- Start : Beranda -->
       <section id="beranda">
         <BerandaPartial />
@@ -60,9 +60,9 @@ onUnmounted(() => {
       <hr class="border-firefly-950" />
 
       <!-- Start : Produk -->
-      <section id="produk" class="scroll-mt-32">
+      <!-- <section id="produk" class="scroll-mt-32">
         <ProdukPartial />
-      </section>
+      </section> -->
       <!-- End : Produk -->
 
       <!-- <hr class="border-firefly-950" /> -->
@@ -70,12 +70,12 @@ onUnmounted(() => {
       <!-- Start : Cara Pesan -->
       <!-- End : Cara Pesan -->
 
-      <hr class="border-firefly-950" />
+      <!-- <hr class="border-firefly-950" /> -->
 
       <!-- Start : Transaksi -->
-      <section id="transaksi" class="scroll-mt-32">
+      <!-- <section id="transaksi" class="scroll-mt-32">
         <TransaksiPartial />
-      </section>
+      </section> -->
       <!-- End : Transaksi -->
     </div>
   </Layout>
