@@ -100,9 +100,7 @@ const openWhatsApp = (product, packageType) => {
               :key="index"
               class="flex items-center justify-between space-x-6"
             >
-              <div
-                class="-ml-6 flex w-full flex-col rounded-xl bg-gray-950/10 py-1.5 pr-4 pl-4 shadow-sm backdrop-blur-sm"
-              >
+              <div class="-ml-6 flex w-full flex-col rounded-xl bg-gray-950/10 px-6 py-1.5 shadow-sm backdrop-blur-sm">
                 <span class="text-xs font-normal">{{ packageType.nama }}</span>
                 <p class="text-base font-medium">{{ packageType.harga }}</p>
               </div>
