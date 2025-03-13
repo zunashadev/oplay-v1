@@ -73,7 +73,7 @@ const openWhatsApp = (product, packageType) => {
   <div
     class="bg-blue-charcoal-950 border-firefly-950 flex flex-col space-y-4 rounded-4xl border p-6 sm:space-y-6 sm:p-8 md:space-y-8 md:p-16"
   >
-    <p class="mx-auto text-2xl font-semibold sm:mx-0 sm:text-3xl md:text-4xl">DAFTAR PRODUKK</p>
+    <p class="mx-auto text-2xl font-semibold sm:mx-0 sm:text-3xl md:text-4xl">DAFTAR PRODUK</p>
     <div class="flex flex-col space-y-8">
       <!-- Start : Search and Filters -->
       <!-- <div>Fitur Cari dan Filter</div> -->
