@@ -9,34 +9,29 @@ import TransaksiPartial from "./partials/Transaksi.vue";
 const activeMenu = ref("beranda");
 const sections = ref([]);
 
-const observeSections = () => {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          // console.log("Elemen terdeteksi:", entry.target.id);
-          activeMenu.value = entry.target.id; // Set activeMenu dengan id yang benar
-        }
-      });
-    },
-    { threshold: 0.5 },
-  );
+/// 🔹 Fungsi untuk mengecek apakah bagian atas section sudah melewati setengah viewport
+const checkActiveSection = () => {
+  const scrollPosition = window.scrollY + window.innerHeight / 2; // Setengah dari viewport
+  let currentSection = "beranda"; // Default section
 
   sections.value.forEach((section) => {
-    observer.observe(section);
+    const sectionTop = section.offsetTop; // Posisi atas section
+    if (scrollPosition >= sectionTop) {
+      currentSection = section.id;
+    }
   });
+
+  activeMenu.value = currentSection;
 };
 
 onMounted(() => {
-  sections.value = document.querySelectorAll("section[id]"); // Hanya pilih <section> dengan id
-
-  observeSections();
+  sections.value = Array.from(document.querySelectorAll("section[id]")); // Dapatkan semua section dengan id
+  window.addEventListener("scroll", checkActiveSection); // Tambahkan event listener
+  checkActiveSection(); // Jalankan pertama kali untuk memastikan status awal
 });
 
 onUnmounted(() => {
-  sections.value.forEach((section) => {
-    observer.unobserve(section);
-  });
+  window.removeEventListener("scroll", checkActiveSection); // Hapus event listener saat komponen di-unmount
 });
 </script>
 
@@ -52,7 +47,7 @@ onUnmounted(() => {
       <hr class="border-firefly-950" />
 
       <!-- Start : Keunggulan -->
-      <section id="keunggulan" class="scroll-mt-32">
+      <section id="keunggulan" class="scroll-mt-24 sm:scroll-mt-32">
         <KeunggulanPartial />
       </section>
       <!-- End : Keunggulan -->
@@ -60,7 +55,7 @@ onUnmounted(() => {
       <hr class="border-firefly-950" />
 
       <!-- Start : Produk -->
-      <section id="produk" class="scroll-mt-32">
+      <section id="produk" class="scroll-mt-24 sm:scroll-mt-32">
         <ProdukPartial />
       </section>
       <!-- End : Produk -->
@@ -73,7 +68,7 @@ onUnmounted(() => {
       <!-- <hr class="border-firefly-950" /> -->
 
       <!-- Start : Transaksi -->
-      <!-- <section id="transaksi" class="scroll-mt-32">
+      <!-- <section id="transaksi" class="scroll-mt-24 sm:scroll-mt-32">
         <TransaksiPartial />
       </section> -->
       <!-- End : Transaksi -->
