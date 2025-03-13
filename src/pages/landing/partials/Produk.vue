@@ -88,7 +88,7 @@ const openWhatsApp = (product, packageType) => {
         >
           <!-- App Name & Logo -->
           <div
-            class="border-b-firefly-950 flex h-28 flex-col items-center justify-center space-y-2 border-b px-2 sm:h-32 sm:space-y-4"
+            class="border-b-firefly-400 flex h-28 flex-col items-center justify-center space-y-2 border-b px-2 sm:h-32 sm:space-y-4"
           >
             <img :src="`/img/product-logos/${product.logo}`" class="max-h-8 w-auto sm:max-h-10" />
             <p class="text-center text-base font-medium">{{ product.nama }}</p>
