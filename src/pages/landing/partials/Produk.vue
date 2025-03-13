@@ -59,16 +59,20 @@ const productList = ref([
       <!-- End : Search and Filters -->
 
       <!-- Start : Products -->
-      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
+      <div
+        class="grid grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-4 md:gap-6 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5"
+      >
         <div v-for="(product, index) in productList" :key="index" class="rounded-xl bg-white text-black">
           <!-- App Name & Logo -->
-          <div class="border-b-firefly-950 flex h-32 flex-col items-center justify-center space-y-4 border-b">
-            <img :src="`/img/product-logos/${product.logo}`" class="max-h-10 w-auto" />
-            <p class="text-base font-medium">{{ product.nama }}</p>
+          <div
+            class="border-b-firefly-950 flex h-28 flex-col items-center justify-center space-y-2 border-b px-2 sm:h-32 sm:space-y-4"
+          >
+            <img :src="`/img/product-logos/${product.logo}`" class="max-h-8 w-auto sm:max-h-10" />
+            <p class="text-center text-base font-medium">{{ product.nama }}</p>
           </div>
           <!-- Package Type -->
-          <div class="flex flex-col space-y-3 px-3 py-6">
-            <div v-for="(type, index) in product.jenisPaket" :key="index" class="flex flex-col space-y-1">
+          <div class="flex flex-col space-y-2 px-3 py-6 sm:space-y-3">
+            <div v-for="(type, index) in product.jenisPaket" :key="index" class="flex flex-col sm:space-y-1">
               <span class="text-xs font-normal">{{ type.nama }}</span>
               <p class="text-base font-medium">{{ type.harga }}</p>
             </div>
