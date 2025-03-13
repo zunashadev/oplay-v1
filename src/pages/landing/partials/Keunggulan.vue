@@ -2,7 +2,7 @@
 
 <template>
   <div class="">
-    <div class="flex flex-col space-y-16">
+    <div class="flex flex-col space-y-8 sm:space-y-16">
       <p class="mx-auto px-6 text-center text-2xl font-semibold sm:text-3xl md:text-4xl">
         Kenapa Harus Memilih Kami
         <span class="text-lightning-yellow-400">?</span>
