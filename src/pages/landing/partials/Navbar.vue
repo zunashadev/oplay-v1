@@ -22,15 +22,14 @@ defineProps({
           <!-- End : Brand -->
 
           <!-- Start : Mobile Menu Button -->
-          <DisclosureButton class="py-2">
+          <DisclosureButton class="py-2 lg:hidden">
             <MenuBurgerIcon class="size-4" />
           </DisclosureButton>
           <!-- End : Mobile Menu Button -->
-        </div>
-        <!-- Start : Mobile Menu Content -->
-        <DisclosurePanel class="pt-3 text-gray-500 sm:hidden">
-          <ul class="flex flex-col">
-            <li class="py-2">
+
+          <!-- Start : Menu Content -->
+          <ul class="hidden items-center space-x-12 lg:flex">
+            <li>
               <a
                 href="#beranda"
                 class="text-base font-medium transition-all"
@@ -43,7 +42,7 @@ defineProps({
                 Beranda
               </a>
             </li>
-            <li class="py-2">
+            <li>
               <a
                 href="#keunggulan"
                 class="text-base font-medium transition-all"
@@ -55,7 +54,7 @@ defineProps({
                 >Keunggulan
               </a>
             </li>
-            <li class="py-2">
+            <li>
               <a
                 href="#produk"
                 class="text-base font-medium transition-all"
@@ -67,7 +66,7 @@ defineProps({
                 >Produk
               </a>
             </li>
-            <li class="py-2">
+            <li>
               <a
                 href="#"
                 class="text-base font-medium transition-all"
@@ -79,7 +78,7 @@ defineProps({
                 >Cara Pesan
               </a>
             </li>
-            <li class="py-2">
+            <li>
               <a
                 href="#transaksi"
                 class="text-base font-medium transition-all"
@@ -91,7 +90,7 @@ defineProps({
                 >Transaksi
               </a>
             </li>
-            <li class="py-2">
+            <li>
               <a
                 href="#"
                 class="text-base font-medium transition-all"
@@ -104,9 +103,89 @@ defineProps({
               </a>
             </li>
           </ul>
-        </DisclosurePanel>
-        <!-- End : Mobile Menu Content -->
+          <!-- Start : Menu Content -->
+        </div>
       </div>
+
+      <!-- Start : Mobile Menu Content -->
+      <DisclosurePanel class="mt-3 bg-gray-600/25 px-8 py-4 shadow-md backdrop-blur-sm sm:rounded-4xl lg:hidden">
+        <ul class="flex flex-col">
+          <li class="py-2">
+            <a
+              href="#beranda"
+              class="text-base font-medium transition-all"
+              :class="
+                activeMenu === 'beranda'
+                  ? 'text-lightning-yellow-400 hover:text-lightning-yellow-500'
+                  : 'hover:text-lightning-yellow-400 text-white'
+              "
+            >
+              Beranda
+            </a>
+          </li>
+          <li class="py-2">
+            <a
+              href="#keunggulan"
+              class="text-base font-medium transition-all"
+              :class="
+                activeMenu === 'keunggulan'
+                  ? 'text-lightning-yellow-400 hover:text-lightning-yellow-500'
+                  : 'hover:text-lightning-yellow-400 text-white'
+              "
+              >Keunggulan
+            </a>
+          </li>
+          <li class="py-2">
+            <a
+              href="#produk"
+              class="text-base font-medium transition-all"
+              :class="
+                activeMenu === 'produk'
+                  ? 'text-lightning-yellow-400 hover:text-lightning-yellow-500'
+                  : 'hover:text-lightning-yellow-400 text-white'
+              "
+              >Produk
+            </a>
+          </li>
+          <li class="py-2">
+            <a
+              href="#"
+              class="text-base font-medium transition-all"
+              :class="
+                activeMenu === 'cara-pesan'
+                  ? 'text-lightning-yellow-400 hover:text-lightning-yellow-500'
+                  : 'hover:text-lightning-yellow-400 text-white'
+              "
+              >Cara Pesan
+            </a>
+          </li>
+          <li class="py-2">
+            <a
+              href="#transaksi"
+              class="text-base font-medium transition-all"
+              :class="
+                activeMenu === 'transaksi'
+                  ? 'text-lightning-yellow-400 hover:text-lightning-yellow-500'
+                  : 'hover:text-lightning-yellow-400 text-white'
+              "
+              >Transaksi
+            </a>
+          </li>
+          <li class="py-2">
+            <a
+              href="#"
+              class="text-base font-medium transition-all"
+              :class="
+                activeMenu === 'laporan-kendala'
+                  ? 'text-lightning-yellow-400 hover:text-lightning-yellow-500'
+                  : 'hover:text-lightning-yellow-400 text-white'
+              "
+              >Laporan Kendala
+            </a>
+          </li>
+        </ul>
+      </DisclosurePanel>
+      <!-- End : Mobile Menu Content -->
     </Disclosure>
   </nav>
 </template>
