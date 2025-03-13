@@ -48,6 +48,24 @@ const productList = ref([
     logo: "disney+hotstar.png",
   },
 ]);
+
+// Start : Open WhatsApp
+const phoneNumber = "6285117247636";
+
+const openWhatsApp = (product, packageType) => {
+  // console.log(product.nama);
+
+  const message =
+    `*Detail Pemesanan*\n\n` +
+    `Produk:  ${product.nama}\n` +
+    `Paket: ${packageType.nama}\n` +
+    `Harga: ${packageType.harga}\n` +
+    `Durasi: (....?)\n`;
+
+  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  window.open(url, "_blank");
+};
+// End : Open WhatsApp
 </script>
 
 <template>
@@ -72,20 +90,24 @@ const productList = ref([
           </div>
           <!-- Package Type -->
           <div class="flex flex-col space-y-2 px-3 py-6 sm:space-y-3">
-            <div v-for="(type, index) in product.jenisPaket" :key="index" class="flex flex-col sm:space-y-1">
-              <span class="text-xs font-normal">{{ type.nama }}</span>
-              <p class="text-base font-medium">{{ type.harga }}</p>
-            </div>
-          </div>
-          <!-- Order Button -->
-          <div class="px-3 pb-3">
-            <a
-              href="https://wa.me/6285117247636?text=Halo%20saya%20tertarik%20dengan%20produk%20Anda"
-              target="blank"
-              class="bg-lightning-yellow-400 block w-full rounded-lg px-4 py-2 text-center font-medium"
+            <div
+              v-for="(packageType, index) in product.jenisPaket"
+              :key="index"
+              class="flex items-center justify-between"
             >
-              Pesan Sekarang
-            </a>
+              <div class="flex flex-col sm:space-y-1">
+                <span class="text-xs font-normal">{{ packageType.nama }}</span>
+                <p class="text-base font-medium">{{ packageType.harga }}</p>
+              </div>
+
+              <!-- Order Button -->
+              <button
+                @click="openWhatsApp(product, packageType)"
+                class="bg-lightning-yellow-400 rounded-lg px-4 py-2 text-center font-medium hover:cursor-pointer"
+              >
+                Pesan
+              </button>
+            </div>
           </div>
         </div>
       </div>
