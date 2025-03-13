@@ -42,7 +42,7 @@ onMounted(() => {
 <template>
   <div class="h-fit w-full bg-[url('/img/backgrounds/beranda-background.png')] bg-cover bg-center bg-no-repeat">
     <div class="w-full pt-20 sm:pt-24 md:pt-28">
-      <div class="max-w-7x mx-auto px-4 py-8 sm:p-20 sm:py-20 md:p-24 md:py-24">
+      <div class="max-w-7x mx-auto px-4 py-14 sm:p-20 sm:py-24 md:p-24 md:py-24">
         <div class="relative">
           <!-- Start : Decoration -->
           <!-- <img src="/img/illustrations/youtube.png" class="absolute -top-8 left-48 h-auto w-14" />
@@ -55,7 +55,7 @@ onMounted(() => {
           <!-- End : Decoration -->
 
           <!-- Start : Content -->
-          <div class="space-y-18 text-center sm:space-y-20">
+          <div class="space-y-20 text-center">
             <!--  -->
             <div class="flex flex-col space-y-10 text-center sm:space-y-12">
               <div class="flex flex-col space-y-2 sm:space-y-3 md:space-y-4">
