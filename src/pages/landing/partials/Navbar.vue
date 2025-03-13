@@ -22,13 +22,13 @@ defineProps({
           <!-- End : Brand -->
 
           <!-- Start : Mobile Menu Button -->
-          <DisclosureButton class="py-2 lg:hidden">
+          <DisclosureButton class="py-2 xl:hidden">
             <MenuBurgerIcon class="size-4" />
           </DisclosureButton>
           <!-- End : Mobile Menu Button -->
 
           <!-- Start : Menu Content -->
-          <ul class="hidden items-center space-x-12 lg:flex">
+          <ul class="hidden items-center space-x-12 xl:flex">
             <li>
               <a
                 href="#beranda"
@@ -108,7 +108,7 @@ defineProps({
       </div>
 
       <!-- Start : Mobile Menu Content -->
-      <DisclosurePanel class="mt-3 bg-gray-600/25 px-8 py-4 shadow-md backdrop-blur-sm sm:rounded-4xl lg:hidden">
+      <DisclosurePanel class="mt-3 bg-gray-600/25 px-8 py-4 shadow-md backdrop-blur-sm sm:rounded-4xl xl:hidden">
         <ul class="flex flex-col">
           <li class="py-2">
             <a

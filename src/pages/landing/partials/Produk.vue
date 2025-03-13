@@ -59,8 +59,9 @@ const openWhatsApp = (product, packageType) => {
     `*Detail Pemesanan*\n\n` +
     `Produk:  ${product.nama}\n` +
     `Paket: ${packageType.nama}\n` +
-    `Harga: ${packageType.harga}\n` +
-    `Durasi: (....?)\n`;
+    `Harga: ${packageType.harga}\n`;
+
+  // Tambah kebutuhan-kebutuhan lain kaya durasi dan sebagainya
 
   const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   window.open(url, "_blank");
@@ -70,7 +71,7 @@ const openWhatsApp = (product, packageType) => {
 
 <template>
   <div class="bg-blue-charcoal-950 border-firefly-950 flex flex-col space-y-8 rounded-4xl border p-6 sm:p-16">
-    <p class="text-2xl font-semibold sm:text-3xl md:text-4xl">DAFTAR PRODUK</p>
+    <p class="mx-auto text-2xl font-semibold sm:mx-0 sm:text-3xl md:text-4xl">DAFTAR PRODUK</p>
     <div class="flex flex-col space-y-8">
       <!-- Start : Search and Filters -->
       <!-- <div>Fitur Cari dan Filter</div> -->
