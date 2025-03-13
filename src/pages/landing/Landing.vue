@@ -65,7 +65,7 @@ onUnmounted(() => {
       </section>
       <!-- End : Produk -->
 
-      <!-- <hr class="border-firefly-950" /> -->
+      <hr class="border-firefly-950" />
 
       <!-- Start : Cara Pesan -->
       <!-- End : Cara Pesan -->
