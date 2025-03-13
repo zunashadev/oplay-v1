@@ -94,7 +94,7 @@ const openWhatsApp = (product, packageType) => {
             <p class="text-center text-base font-medium">{{ product.nama }}</p>
           </div>
           <!-- Package Type -->
-          <div class="flex flex-col space-y-1 px-3 py-6 sm:space-y-2">
+          <div class="flex flex-col space-y-1.5 px-2 py-4 sm:space-y-2">
             <div
               v-for="(packageType, index) in product.jenisPaket"
               :key="index"
