@@ -42,7 +42,7 @@ onUnmounted(() => {
 
 <template>
   <Layout :active-menu="activeMenu">
-    <div class="space-y-20 sm:space-y-28 md:space-y-32">
+    <div class="space-y-16 sm:space-y-24 md:space-y-32">
       <!-- Start : Beranda -->
       <section id="beranda">
         <BerandaPartial />
