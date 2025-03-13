@@ -8,39 +8,39 @@
         <span class="text-lightning-yellow-400">?</span>
       </p>
       <div class="mx-auto grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
-        <div class="flex max-w-48 flex-col items-center space-y-6">
-          <div class="bg-firefly-950 flex size-24 items-center justify-center rounded-full">
-            <img src="/img/illustrations/low-price.png" class="h-auto w-14" />
+        <div class="flex max-w-64 flex-col items-center space-y-6 sm:max-w-48">
+          <div class="bg-firefly-950 flex size-20 items-center justify-center rounded-full sm:size-24">
+            <img src="/img/illustrations/low-price.png" class="h-auto w-12 sm:w-14" />
           </div>
           <div class="flex flex-col space-y-2 text-center sm:space-y-4">
-            <p class="text-xl font-semibold">Harga Terjangkau</p>
+            <p class="text-lg font-semibold sm:text-xl">Harga Terjangkau</p>
             <p class="text-base font-normal">Lebih murah dari harga resmi</p>
           </div>
         </div>
-        <div class="flex max-w-48 flex-col items-center space-y-6">
-          <div class="bg-firefly-950 flex size-24 items-center justify-center rounded-full">
-            <img src="/img/illustrations/quick.png" class="h-auto w-16 pr-1" />
+        <div class="flex max-w-64 flex-col items-center space-y-6 sm:max-w-48">
+          <div class="bg-firefly-950 flex size-20 items-center justify-center rounded-full sm:size-24">
+            <img src="/img/illustrations/quick.png" class="h-auto w-14 pr-1 sm:w-16" />
           </div>
           <div class="flex flex-col space-y-2 text-center sm:space-y-4">
-            <p class="text-xl font-semibold">Proses Cepat & Otomatis</p>
+            <p class="text-lg font-semibold sm:text-xl">Proses Cepat & Otomatis</p>
             <p class="text-base font-normal">Akun dikirim setelah pembayaran</p>
           </div>
         </div>
-        <div class="flex max-w-48 flex-col items-center space-y-6">
-          <div class="bg-firefly-950 flex size-24 items-center justify-center rounded-full">
-            <img src="/img/illustrations/warranty.png" class="h-auto w-14" />
+        <div class="flex max-w-64 flex-col items-center space-y-6 sm:max-w-48">
+          <div class="bg-firefly-950 flex size-20 items-center justify-center rounded-full sm:size-24">
+            <img src="/img/illustrations/warranty.png" class="h-auto w-12 sm:w-14" />
           </div>
           <div class="flex flex-col space-y-2 text-center sm:space-y-4">
-            <p class="text-xl font-semibold">Garansi Keamanan</p>
+            <p class="text-lg font-semibold sm:text-xl">Garansi Keamanan</p>
             <p class="text-base font-normal">Jika ada masalah, kami siap membantu!</p>
           </div>
         </div>
-        <div class="flex max-w-48 flex-col items-center space-y-6">
-          <div class="bg-firefly-950 flex size-24 items-center justify-center rounded-full">
-            <img src="/img/illustrations/wallet.png" class="h-auto w-12" />
+        <div class="flex max-w-64 flex-col items-center space-y-6 sm:max-w-48">
+          <div class="bg-firefly-950 flex size-20 items-center justify-center rounded-full sm:size-24">
+            <img src="/img/illustrations/wallet.png" class="h-auto w-10 sm:w-12" />
           </div>
           <div class="flex flex-col space-y-2 text-center sm:space-y-4">
-            <p class="text-xl font-semibold">Beragam Metode Pembayaran</p>
+            <p class="text-lg font-semibold sm:text-xl">Beragam Metode Pembayaran</p>
             <p class="text-base font-normal">Transfer bank, e-wallet, dan crypto tersedia</p>
           </div>
         </div>
