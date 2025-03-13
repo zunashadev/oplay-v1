@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted } from "vue";
-import searchIcon from "../../../components/icons/search.vue";
+import SearchIcon from "../../../components/icons/search.vue";
 
 const text = "OPLAY, our play!";
 const displayedText = ref(""); // Tidak perlu spasi di awal
