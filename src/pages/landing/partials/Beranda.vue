@@ -1,6 +1,8 @@
 <script setup>
 import { ref, onMounted } from "vue";
+
 import SearchIcon from "../../../components/icons/search.vue";
+import WhatsAppIcon from "../../../components/icons/social-media/WhatsApp.vue";
 
 const text = "OPLAY, our play!";
 const displayedText = ref(""); // Tidak perlu spasi di awal
@@ -55,11 +57,11 @@ onMounted(() => {
           />
           <img
             src="/img/illustrations/game.png"
-            class="absolute bottom-16 left-0 h-auto w-6 sm:left-4 sm:w-8 md:left-8 md:w-10 lg:left-14 lg:w-12 xl:left-20"
+            class="absolute bottom-16 -left-2 h-auto w-6 sm:left-4 sm:w-8 md:left-7 md:w-10 lg:left-12 lg:w-12 xl:left-19"
           />
           <img
             src="/img/illustrations/netflix.png"
-            class="absolute right-0 bottom-16 h-auto w-4 sm:right-4 sm:w-6 md:right-8 md:w-8 lg:right-14 lg:w-10 xl:right-20"
+            class="absolute -right-1 bottom-16 h-auto w-4 sm:right-4 sm:w-6 md:right-8 md:w-8 lg:right-14 lg:w-10 xl:right-20"
           />
 
           <img
@@ -91,13 +93,25 @@ onMounted(() => {
               </div>
             </div>
             <!--  -->
-            <a
-              href="#produk"
-              class="bg-lightning-yellow-400 hover:bg-lightning-yellow-500 hover:outline-lightning-yellow-400 mx-auto flex w-fit items-center space-x-3 rounded-full px-6 py-3 font-semibold text-black transition-all hover:outline hover:outline-offset-4"
-            >
-              <span> Telusuri Produk </span>
-              <searchIcon class="size-5" />
-            </a>
+            <div class="flex">
+              <div class="mx-auto flex flex-col gap-4 lg:flex-row">
+                <a
+                  href="https://wa.me/6285117247636"
+                  target="_blank"
+                  class="border-lightning-yellow-400 hover:bg-lightning-yellow-500 hover:outline-lightning-yellow-400 text-lightning-yellow-400 mx-auto flex w-full items-center space-x-3 rounded-full border px-6 py-3 font-semibold transition-all hover:text-black hover:outline hover:outline-offset-4 sm:w-fit"
+                >
+                  <span> Hubungi Penjual </span>
+                  <WhatsAppIcon class="size-5" />
+                </a>
+                <a
+                  href="#produk"
+                  class="bg-lightning-yellow-400 hover:bg-lightning-yellow-500 hover:outline-lightning-yellow-400 mx-auto flex w-full items-center space-x-3 rounded-full px-6 py-3 font-semibold text-black transition-all hover:outline hover:outline-offset-4 sm:w-fit"
+                >
+                  <span> Telusuri Produk </span>
+                  <searchIcon class="size-5" />
+                </a>
+              </div>
+            </div>
           </div>
           <!-- End : Content -->
         </div>
