@@ -58,7 +58,7 @@ onMounted(() => {
           <div class="space-y-20 text-center">
             <!--  -->
             <div class="flex flex-col space-y-12 text-center">
-              <div class="flex flex-col space-y-4">
+              <div class="flex flex-col space-y-6 sm:space-y-4">
                 <div class="text-lg font-medium sm:text-xl md:text-2xl">
                   <span class="text-lightning-yellow-400 font-semibold">
                     {{ displayedText }}<span class="inline-block w-[1ch]"></span>
@@ -68,7 +68,7 @@ onMounted(() => {
                   Dapatkan Akun Premium dengan Harga Terjangkau !
                 </div>
               </div>
-              <div class="text-base font-normal">
+              <div class="text-sm font-normal sm:text-base">
                 🚀 Netflix, Spotify, YouTube, dan Lainnya - Langganan Tanpa Ribet, Langsung Aktif!
               </div>
             </div>

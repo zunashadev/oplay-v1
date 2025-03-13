@@ -51,15 +51,15 @@ const productList = ref([
 </script>
 
 <template>
-  <div class="bg-blue-charcoal-950 border-firefly-950 flex flex-col space-y-8 rounded-4xl border p-16">
-    <p class="text-4xl font-semibold">DAFTAR PRODUK</p>
+  <div class="bg-blue-charcoal-950 border-firefly-950 flex flex-col space-y-8 rounded-4xl border p-6 sm:p-16">
+    <p class="text-2xl font-semibold sm:text-3xl md:text-4xl">DAFTAR PRODUK</p>
     <div class="flex flex-col space-y-8">
       <!-- Start : Search and Filters -->
       <!-- <div>Fitur Cari dan Filter</div> -->
       <!-- End : Search and Filters -->
 
       <!-- Start : Products -->
-      <div class="grid grid-cols-5 gap-6">
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
         <div v-for="(product, index) in productList" :key="index" class="rounded-xl bg-white text-black">
           <!-- App Name & Logo -->
           <div class="border-b-firefly-950 flex h-32 flex-col items-center justify-center space-y-4 border-b">

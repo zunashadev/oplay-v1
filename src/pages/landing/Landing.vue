@@ -60,9 +60,9 @@ onUnmounted(() => {
       <hr class="border-firefly-950" />
 
       <!-- Start : Produk -->
-      <!-- <section id="produk" class="scroll-mt-32">
+      <section id="produk" class="scroll-mt-32">
         <ProdukPartial />
-      </section> -->
+      </section>
       <!-- End : Produk -->
 
       <!-- <hr class="border-firefly-950" /> -->
