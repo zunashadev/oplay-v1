@@ -7,7 +7,7 @@
         Kenapa Harus Memilih Kami
         <span class="text-lightning-yellow-400">?</span>
       </p>
-      <div class="mx-auto grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
+      <div class="mx-auto grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-6 md:grid-cols-4">
         <div class="flex max-w-64 flex-col items-center space-y-6 sm:max-w-48">
           <div class="bg-firefly-950 flex size-20 items-center justify-center rounded-full sm:size-24">
             <img src="/img/illustrations/low-price.png" class="h-auto w-12 sm:w-14" />
