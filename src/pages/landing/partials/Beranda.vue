@@ -47,28 +47,28 @@ onMounted(() => {
           <!-- Start : Decoration -->
           <img
             src="/img/illustrations/youtube.png"
-            class="absolute -top-4 left-0 h-auto w-6 sm:-top-8 sm:left-48 sm:w-14"
+            class="absolute -top-4 left-0 h-auto w-6 sm:left-4 sm:w-8 md:left-8 md:w-10 lg:left-14 lg:w-12 xl:left-20"
           />
           <img
             src="/img/illustrations/spotify.png"
-            class="absolute -top-4 right-0 h-auto w-4 sm:-top-8 sm:right-48 sm:w-12"
+            class="absolute -top-4 right-0 h-auto w-4 sm:right-4 sm:w-6 md:right-8 md:w-8 lg:right-14 lg:w-10 xl:right-20"
           />
           <img
             src="/img/illustrations/game.png"
-            class="absolute bottom-16 left-0 h-auto w-6 sm:bottom-2 sm:left-72 sm:w-14"
+            class="absolute bottom-16 left-0 h-auto w-6 sm:left-4 sm:w-8 md:left-8 md:w-10 lg:left-14 lg:w-12 xl:left-20"
           />
           <img
             src="/img/illustrations/netflix.png"
-            class="absolute right-0 bottom-16 h-auto w-4 sm:right-72 sm:bottom-4 sm:w-12"
+            class="absolute right-0 bottom-16 h-auto w-4 sm:right-4 sm:w-6 md:right-8 md:w-8 lg:right-14 lg:w-10 xl:right-20"
           />
 
           <img
             src="/img/illustrations/cloud.png"
-            class="absolute top-1/2 -left-7 h-auto w-5 translate-y-5 sm:-left-36 sm:w-9 sm:-translate-y-1/2"
+            class="absolute top-1/2 -left-6 h-auto w-3 translate-y-5 sm:-left-8 sm:w-5 md:-left-14 lg:-left-24 xl:-left-28 xl:w-8 xl:-translate-y-1/2"
           />
           <img
             src="/img/illustrations/cloud.png"
-            class="absolute top-1/2 -right-7 h-auto w-5 translate-y-5 sm:-right-36 sm:w-9 sm:translate-y-1/2"
+            class="absolute top-1/2 -right-6 h-auto w-3 translate-y-5 sm:-right-8 sm:w-5 md:-right-14 lg:-right-24 xl:-right-28 xl:w-8 xl:translate-y-1/2"
           />
           <!-- End : Decoration -->
 
