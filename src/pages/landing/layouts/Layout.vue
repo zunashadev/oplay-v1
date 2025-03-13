@@ -13,6 +13,6 @@ defineProps({
     <!-- Content -->
     <slot></slot>
     <!-- Footer -->
-    <FooterPartial class="-mx-4 mt-8 sm:-mx-12 md:-mx-20" />
+    <FooterPartial class="-mx-4 mt-12 sm:-mx-12 md:-mx-20" />
   </div>
 </template>
