@@ -21,7 +21,7 @@
         <!--  -->
         <div class="flex items-center space-x-4 sm:max-w-48 sm:flex-col sm:space-y-6 sm:space-x-0">
           <div class="bg-firefly-950 flex aspect-square size-16 items-center justify-center rounded-full sm:size-24">
-            <img src="/img/illustrations/quick.png" class="h-auto w-10 pr-1 sm:w-16" />
+            <img src="/img/illustrations/quick.png" class="h-auto w-11 pr-1 sm:w-17" />
           </div>
           <div class="flex flex-col space-y-0 sm:space-y-4 sm:text-center">
             <p class="text-md font-semibold sm:text-xl">Proses Cepat & Otomatis</p>
