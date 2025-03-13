@@ -14,7 +14,7 @@ import YouTubeIcon from "../../../components/icons/social-media/YouTube.vue";
           <p class="text-xl font-semibold text-white sm:text-2xl">OPLAY</p>
         </a>
       </div>
-      <div class="flex items-center space-x-3 sm:pl-6">
+      <div class="flex items-center space-x-2 sm:space-x-3 sm:pl-6">
         <WhatsAppIcon class="size-4 sm:size-5" />
         <InstagramIcon class="size-4 sm:size-5" />
         <YouTubeIcon class="size-4 sm:size-5" />
