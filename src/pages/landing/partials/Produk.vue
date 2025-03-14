@@ -1,53 +1,34 @@
 <script setup>
-import { ref } from "vue";
+import { ref, watch, onMounted, watchEffect, inject } from "vue";
 
-const productList = ref([
-  {
-    nama: "Netflix Premium",
-    jenisPaket: [
-      { nama: "Basic", harga: "15000 / bln" },
-      { nama: "Standard", harga: "30000 / bln" },
-      { nama: "Premium", harga: "60000 / bln" },
-    ],
-    logo: "netflix.png",
-  },
-  {
-    nama: "Spotify Premium Upgrade",
-    jenisPaket: [
-      { nama: "Basic", harga: "15000 / bln" },
-      { nama: "Standard", harga: "30000 / bln" },
-      { nama: "Premium", harga: "60000 / bln" },
-    ],
-    logo: "spotify.png",
-  },
-  {
-    nama: "Canva Pro Upgrade",
-    jenisPaket: [
-      { nama: "Basic", harga: "15000 / bln" },
-      { nama: "Standard", harga: "30000 / bln" },
-      { nama: "Premium", harga: "60000 / bln" },
-    ],
-    logo: "canva.png",
-  },
-  {
-    nama: "YouTube Premium",
-    jenisPaket: [
-      { nama: "Basic", harga: "15000 / bln" },
-      { nama: "Standard", harga: "30000 / bln" },
-      { nama: "Premium", harga: "60000 / bln" },
-    ],
-    logo: "youtube.png",
-  },
-  {
-    nama: "Disney + Hotstar",
-    jenisPaket: [
-      { nama: "Basic", harga: "15000 / bln" },
-      { nama: "Standard", harga: "30000 / bln" },
-      { nama: "Premium", harga: "60000 / bln" },
-    ],
-    logo: "disney+hotstar.png",
-  },
-]);
+import OrderModalComponent from "../components/OrderModal.vue";
+
+// Start : Products
+const products = ref([]);
+
+const fetchProducts = async () => {
+  try {
+    const response = await fetch("/datas/products.json"); // Mengambil file JSON dari public
+    products.value = await response.json();
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+};
+
+onMounted(fetchProducts);
+// End : Products
+
+// Start : Order Modal
+const orderModalRef = ref(null);
+
+function openOrderModal() {
+  orderModalRef.value.openModal();
+}
+
+function closeOrderModal() {
+  orderModalRef.value.closeModal();
+}
+// End : Order Modal
 
 // Start : Open WhatsApp
 const phoneNumber = "6285117247636";
@@ -70,6 +51,10 @@ const openWhatsApp = (product, packageType) => {
 </script>
 
 <template>
+  <!-- Start : Modal -->
+  <OrderModalComponent ref="orderModalRef"></OrderModalComponent>
+  <!-- End : Modal -->
+
   <div
     class="bg-blue-charcoal-950 border-firefly-950 flex flex-col space-y-4 rounded-4xl border p-6 sm:space-y-6 sm:p-8 md:space-y-8 md:p-10"
   >
@@ -92,45 +77,47 @@ const openWhatsApp = (product, packageType) => {
         class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 md:gap-8 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5"
       >
         <div
-          v-for="(product, index) in productList"
+          v-for="(product, index) in products"
           :key="index"
-          class="from-lightning-yellow-50 to-firefly-50 rounded-xl bg-gradient-to-tl text-black transition-all hover:scale-105"
+          class="from-lightning-yellow-50 to-firefly-50 flex h-full flex-col rounded-xl bg-gradient-to-tl text-black transition-all hover:scale-105"
         >
           <!-- App Name & Logo -->
-          <div
-            class="border-b-firefly-400 flex h-28 flex-col items-center justify-center space-y-2 border-b px-2 sm:h-32 sm:space-y-4"
-          >
+          <div class="flex h-28 flex-col items-center justify-center space-y-2 px-2 sm:h-32 sm:space-y-4">
             <img :src="`/img/product-logos/${product.logo}`" class="max-h-8 w-auto sm:max-h-10" />
             <p class="text-center text-base font-medium">{{ product.nama }}</p>
           </div>
           <!-- Package Type -->
           <div
-            class="from-lightning-yellow-200 to-firefly-200 flex flex-col space-y-1.5 rounded-b-xl bg-gradient-to-tl px-2 py-4 sm:space-y-2"
+            class="from-lightning-yellow-200 to-firefly-200 border-firefly-400 flex flex-grow flex-col space-y-1.5 border-y bg-gradient-to-tl px-2 py-4 sm:space-y-2"
           >
             <div
               v-for="(packageType, index) in product.jenisPaket"
               :key="index"
-              class="flex items-center justify-between space-x-4"
+              class="bg-firefly-950/50 -ml-6 flex w-full flex-col rounded-xl px-5 py-1.5 shadow-sm backdrop-blur-sm"
             >
-              <div
-                class="bg-firefly-950/50 -ml-6 flex w-full flex-col rounded-xl px-5 py-1.5 shadow-sm backdrop-blur-sm"
-              >
-                <span class="text-xs font-light text-white">{{ packageType.nama }}</span>
-                <p class="text-base font-medium text-white">{{ packageType.harga }}</p>
-              </div>
-
-              <!-- Order Button -->
-              <button
-                @click="openWhatsApp(product, packageType)"
-                class="bg-lightning-yellow-400 hover:bg-lightning-yellow-500 rounded-lg px-4 py-2 text-center font-medium transition-all hover:cursor-pointer"
-              >
-                Pesan
-              </button>
+              <span class="text-xs font-light text-white">{{ packageType.nama }}</span>
+              <p class="text-base font-medium text-white">
+                Rp. {{ packageType.harga }} <span class="text-xs font-light">/{{ packageType.durasi }}</span>
+              </p>
             </div>
+          </div>
+
+          <!-- Order Button -->
+          <div class="p-3">
+            <button
+              @click="openOrderModal"
+              class="bg-lightning-yellow-400 hover:bg-lightning-yellow-500 w-full rounded-lg px-4 py-2 text-center font-medium transition-all hover:cursor-pointer"
+            >
+              Pesan
+            </button>
           </div>
         </div>
       </div>
       <!-- Start : Products -->
     </div>
   </div>
+
+  <!-- Start : Order Modal -->
+
+  <!-- End : Order Modal -->
 </template>

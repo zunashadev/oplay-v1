@@ -1,0 +1,46 @@
+[
+  {
+    "nama": "Netflix Premium",
+    "jenisPaket": [
+      { "nama": "Basic", "harga": 15000, "durasi": "bulan" },
+      { "nama": "Standard", "harga": 30000, "durasi": "bulan" },
+      { "nama": "Premium", "harga": 60000, "durasi": "bulan" }
+    ],
+    "logo": "netflix.png"
+  },
+  {
+    "nama": "Spotify Premium Upgrade",
+    "jenisPaket": [
+      { "nama": "Basic", "harga": 15000, "durasi": "bulan" },
+      { "nama": "Standard", "harga": 30000, "durasi": "bulan" },
+      { "nama": "Premium", "harga": 60000, "durasi": "bulan" }
+    ],
+    "logo": "spotify.png"
+  },
+  {
+    "nama": "Canva Pro Upgrade",
+    "jenisPaket": [
+      { "nama": "Basic", "harga": 15000, "durasi": "minggu" },
+      { "nama": "Standard", "harga": 30000, "durasi": "minggu" },
+      { "nama": "Premium", "harga": 60000, "durasi": "minggu" }
+    ],
+    "logo": "canva.png"
+  },
+  {
+    "nama": "YouTube Premium",
+    "jenisPaket": [
+      { "nama": "User Reguler", "harga": 15000, "durasi": "bulan" },
+      { "nama": "User Premium", "harga": 30000, "durasi": "bulan" }
+    ],
+    "logo": "youtube.png"
+  },
+  {
+    "nama": "Disney + Hotstar",
+    "jenisPaket": [
+      { "nama": "Basic", "harga": 15000, "durasi": "hari" },
+      { "nama": "Standard", "harga": 30000, "durasi": "hari" },
+      { "nama": "Premium", "harga": 60000, "durasi": "hari" }
+    ],
+    "logo": "disney+hotstar.png"
+  }
+]
