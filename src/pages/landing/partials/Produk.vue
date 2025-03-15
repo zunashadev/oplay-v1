@@ -2,6 +2,7 @@
 import { ref, watch, onMounted, watchEffect, inject } from "vue";
 
 import OrderModalComponent from "../components/OrderModal.vue";
+import ButtonComponent from "../../../components/buttons/Button.vue";
 
 // Start : Products
 const products = ref([]);
@@ -20,8 +21,10 @@ onMounted(fetchProducts);
 
 // Start : Order Modal
 const orderModalRef = ref(null);
+const selectedProduct = ref(null);
 
-function openOrderModal() {
+function openOrderModal(product) {
+  selectedProduct.value = product;
   orderModalRef.value.openModal();
 }
 
@@ -52,7 +55,7 @@ const openWhatsApp = (product, packageType) => {
 
 <template>
   <!-- Start : Modal -->
-  <OrderModalComponent ref="orderModalRef"></OrderModalComponent>
+  <OrderModalComponent ref="orderModalRef" :product="selectedProduct"></OrderModalComponent>
   <!-- End : Modal -->
 
   <div
@@ -79,7 +82,7 @@ const openWhatsApp = (product, packageType) => {
         <div
           v-for="(product, index) in products"
           :key="index"
-          class="from-lightning-yellow-50 to-firefly-50 flex h-full flex-col rounded-xl bg-gradient-to-tl text-black transition-all hover:scale-105"
+          class="from-lightning-yellow-50 to-firefly-50 flex h-full transform flex-col rounded-xl bg-gradient-to-tl text-black transition-all hover:scale-105"
         >
           <!-- App Name & Logo -->
           <div class="flex h-28 flex-col items-center justify-center space-y-2 px-2 sm:h-32 sm:space-y-4">
@@ -104,12 +107,7 @@ const openWhatsApp = (product, packageType) => {
 
           <!-- Order Button -->
           <div class="p-3">
-            <button
-              @click="openOrderModal"
-              class="bg-lightning-yellow-400 hover:bg-lightning-yellow-500 w-full rounded-lg px-4 py-2 text-center font-medium transition-all hover:cursor-pointer"
-            >
-              Pesan
-            </button>
+            <ButtonComponent fullWidth @click="openOrderModal(product)">Pesan</ButtonComponent>
           </div>
         </div>
       </div>

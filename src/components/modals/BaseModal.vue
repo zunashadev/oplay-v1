@@ -32,7 +32,7 @@ watch(isOpen, (newVal) => {
 });
 // End : Set Scrollbar
 
-defineExpose({ openModal });
+defineExpose({ openModal, closeModal });
 </script>
 
 <template>
@@ -51,7 +51,7 @@ defineExpose({ openModal });
       </TransitionChild>
 
       <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
-        <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+        <div class="flex min-h-full items-center justify-center p-4 text-center">
           <TransitionChild
             as="template"
             enter="ease-out duration-300"
@@ -61,13 +61,8 @@ defineExpose({ openModal });
             leave-from="opacity-100 translate-y-0 sm:scale-100"
             leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
           >
-            <DialogPanel class="relative w-fit transform overflow-hidden rounded-lg bg-white shadow-xl transition-all">
-              <slot>
-                <div class="p-5 text-center sm:my-8 sm:w-full sm:max-w-lg">
-                  <h3 class="text-lg leading-6 font-medium text-gray-900">Base Modal</h3>
-                  <p class="mt-2 text-sm text-gray-500">Jangan lupa custom ya bro!</p>
-                </div>
-              </slot>
+            <DialogPanel class="relative transform overflow-hidden rounded-lg bg-pink-500 shadow-xl transition-all">
+              <slot>INI BASE BRO!</slot>
             </DialogPanel>
           </TransitionChild>
         </div>

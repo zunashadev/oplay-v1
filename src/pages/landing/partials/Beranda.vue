@@ -100,7 +100,7 @@ onMounted(() => {
                 <a
                   href="https://wa.me/6285117247636"
                   target="_blank"
-                  class="border-lightning-yellow-400 hover:bg-lightning-yellow-500 hover:outline-lightning-yellow-400 text-lightning-yellow-400 mx-auto flex w-full items-center space-x-3 rounded-full border px-6 py-3 font-semibold transition-all hover:text-black hover:outline hover:outline-offset-4 sm:w-fit"
+                  class="border-lightning-yellow-400 bg-lightning-yellow-400/10 hover:bg-lightning-yellow-500 hover:outline-lightning-yellow-400 text-lightning-yellow-400 mx-auto flex w-full items-center space-x-3 rounded-full border px-6 py-3 font-semibold transition-all hover:text-black hover:outline hover:outline-offset-4 sm:w-fit"
                 >
                   <span> Hubungi Penjual </span>
                   <WhatsAppIcon class="size-5" />
