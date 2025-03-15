@@ -67,10 +67,10 @@ watch(
               <p class="text-base font-normal">Pilih paket :</p>
               <div class="flex space-x-4">
                 <div
-                  class="from-lightning-yellow-200 to-firefly-200 outline-lightning-yellow-400 shadow-lightning-yellow-400/50 relative flex h-20 w-72 items-end justify-between rounded-lg bg-gradient-to-br p-5 text-black shadow-lg outline-2 hover:cursor-pointer"
+                  class="from-lightning-yellow-200 to-firefly-200 outline-lightning-yellow-400 shadow-lightning-yellow-400/50 relative flex h-20 w-72 items-end justify-between rounded-lg bg-gradient-to-br px-5 py-3 text-black shadow-lg outline-2 hover:cursor-pointer"
                 >
                   <div
-                    class="bg-lightning-yellow-400 absolute top-1 -left-2 rounded-md px-4 py-0.5 text-xs font-medium"
+                    class="bg-lightning-yellow-400 absolute top-2 -left-2 rounded-sm px-4 py-0.5 text-xs font-medium"
                   >
                     🔥 Terlaris
                   </div>
