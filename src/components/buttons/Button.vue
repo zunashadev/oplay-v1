@@ -63,9 +63,8 @@ const buttonClasses = computed(() => {
 <template>
   <button
     :class="[
-      'inline-flex justify-center rounded-lg px-4 py-2 text-center text-sm font-medium transition-all duration-200 ease-in hover:cursor-pointer disabled:cursor-not-allowed disabled:opacity-50 disabled:shadow-none',
+      'inline-flex justify-center rounded-lg px-4 py-2 text-center text-sm font-medium transition-all duration-200 ease-in hover:cursor-pointer disabled:cursor-not-allowed disabled:opacity-50',
       buttonClasses,
-      variant !== 'ghost' ? 'shadow-sm hover:shadow-md focus:shadow-none' : '',
       shape === 'pill' ? 'rounded-full' : '',
       fullWidth ? 'w-full' : '',
     ]"
