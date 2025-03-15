@@ -67,12 +67,12 @@ watch(
               <p class="text-base font-normal">Pilih paket :</p>
               <div class="flex space-x-4">
                 <div
-                  class="from-lightning-yellow-200 to-firefly-200 outline-lightning-yellow-400 relative flex h-20 w-72 items-end justify-between rounded-lg bg-gradient-to-br p-5 text-black outline-2 hover:cursor-pointer"
+                  class="from-lightning-yellow-200 to-firefly-200 outline-lightning-yellow-400 shadow-lightning-yellow-400/50 relative flex h-20 w-72 items-end justify-between rounded-lg bg-gradient-to-br p-5 text-black shadow-lg outline-2 hover:cursor-pointer"
                 >
                   <div
                     class="bg-lightning-yellow-400 absolute top-1 -left-2 rounded-md px-4 py-0.5 text-xs font-medium"
                   >
-                    Terlaris
+                    🔥 Terlaris
                   </div>
                   <div class="text-lg font-medium">Per 3 Bulan</div>
                   <div class="flex flex-col items-end space-y-1">
@@ -81,27 +81,8 @@ watch(
                   </div>
                 </div>
                 <div
-                  class="from-lightning-yellow-200 to-firefly-200 outline-lightning-yellow-400 relative flex h-20 w-72 items-end justify-between rounded-lg bg-gradient-to-br p-5 text-black outline-2 hover:cursor-pointer"
+                  class="from-lightning-yellow-200 to-firefly-200 outline-lightning-yellow-400 relative flex h-20 w-72 items-end justify-between rounded-lg bg-gradient-to-br p-5 text-black outline-2 grayscale hover:cursor-pointer"
                 >
-                  <div
-                    class="bg-lightning-yellow-400 absolute top-1 -left-2 rounded-md px-4 py-0.5 text-xs font-medium"
-                  >
-                    Terlaris
-                  </div>
-                  <div class="text-lg font-medium">Per 3 Bulan</div>
-                  <div class="flex flex-col items-end space-y-1">
-                    <p class="text-sm font-medium">Rp30.000</p>
-                    <p class="text-xs font-light">Rp30.000 / bulan</p>
-                  </div>
-                </div>
-                <div
-                  class="from-lightning-yellow-200 to-firefly-200 outline-lightning-yellow-400 relative flex h-20 w-72 items-end justify-between rounded-lg bg-gradient-to-br p-5 text-black outline-2 hover:cursor-pointer"
-                >
-                  <div
-                    class="bg-lightning-yellow-400 absolute top-1 -left-2 rounded-md px-4 py-0.5 text-xs font-medium"
-                  >
-                    Terlaris
-                  </div>
                   <div class="text-lg font-medium">Per 3 Bulan</div>
                   <div class="flex flex-col items-end space-y-1">
                     <p class="text-sm font-medium">Rp30.000</p>
