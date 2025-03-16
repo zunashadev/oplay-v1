@@ -101,7 +101,7 @@ const openWhatsApp = (product, packageType) => {
               <span class="text-xs font-light text-white">{{ packageType.name }}</span>
               <p class="text-base font-medium text-white">
                 Rp. {{ packageType.price }}
-                <span class="text-xs font-light">/ {{ packageType.unit }} {{ packageType.duration }}</span>
+                <span class="text-xs font-light">/ {{ packageType.unit }} {{ packageType.durationType }}</span>
               </p>
             </div>
           </div>

@@ -1,11 +1,12 @@
 <script setup>
-import { ref, defineExpose, watch } from "vue";
+import { ref, defineExpose, watch, computed } from "vue";
 
 import BaseModalComponent from "../../../components/modals/BaseModal.vue";
 import ButtonComponent from "../../../components/buttons/Button.vue";
 
 import CrossSmallIcon from "../../../components/icons/CrossSmall.vue";
 import WhatsAppIcon from "../../../components/icons/social-media/WhatsApp.vue";
+import ShareIcon from "../../../components/icons/Share.vue";
 
 const baseModalRef = ref(null);
 
@@ -24,17 +25,46 @@ const props = defineProps({
   product: Object, // Bisa dikirim dari parent
 });
 
+// Start : Form
+const selectedPackageType = ref(null);
+const selectedDuration = ref(null);
+
+const selectPackage = (packageType) => {
+  if (selectedPackageType.value !== packageType) {
+    selectedPackageType.value = packageType;
+    selectedDuration.value = null;
+  }
+  //   console.log(selectedPackageType.value);
+};
+
+const selectDuration = (duration) => {
+  selectedDuration.value = duration;
+  //   console.log(selectedDuration.value);
+};
+
+const totalCost = computed(() => {
+  if (!selectedPackageType.value || !selectedDuration.value) {
+    return 0; // Jika belum memilih paket atau durasi, total biaya adalah 0
+  }
+
+  //   console.log(selectedPackageType.value.pricePerUnit);
+  //   console.log(selectedDuration.value);
+
+  return selectedPackageType.value.pricePerUnit * selectedDuration.value;
+});
+// End : Form
+
 // ✅ Watch perubahan pada props.product
-watch(
-  () => props.product,
-  (newProduct) => {
-    if (newProduct) {
-      console.log("Product updated:", newProduct);
-      openModal(); // Jika product ada, buka modal
-    }
-  },
-  { deep: true }, // Gunakan deep watch jika product adalah object
-);
+// watch(
+//   () => props.product,
+//   (newProduct) => {
+//     if (newProduct) {
+//       console.log("Product updated:", newProduct);
+//       openModal(); // Jika product ada, buka modal
+//     }
+//   },
+//   { deep: true }, // Gunakan deep watch jika product adalah object
+// );
 </script>
 
 <template>
@@ -81,7 +111,9 @@ watch(
                 <div
                   v-for="(packageType, index) in product.packageTypes"
                   :key="index"
-                  class="from-lightning-yellow-200 to-firefly-200 outline-lightning-yellow-400 shadow-lightning-yellow-400/50 relative flex h-20 w-full items-end justify-between rounded-lg bg-gradient-to-br px-5 py-3 text-black shadow-lg outline-2 hover:cursor-pointer"
+                  @click="selectPackage(packageType)"
+                  class="from-lightning-yellow-200 to-firefly-200 outline-lightning-yellow-400 shadow-lightning-yellow-400/50 relative flex h-20 w-full items-end justify-between rounded-lg bg-gradient-to-br px-5 py-3 text-black shadow-lg outline-2 transition-all duration-200 hover:cursor-pointer"
+                  :class="packageType === selectedPackageType ? '' : 'grayscale'"
                 >
                   <div
                     v-if="packageType.isBestSeller"
@@ -92,7 +124,9 @@ watch(
                   <div class="text-lg font-medium">{{ packageType.name }}</div>
                   <div class="flex flex-col items-end space-y-1">
                     <p class="text-sm font-medium">Rp. {{ packageType.price }}</p>
-                    <p class="text-xs font-light">Rp. {{ packageType.pricePerUnit }} / {{ packageType.duration }}</p>
+                    <p class="text-xs font-light">
+                      Rp. {{ packageType.pricePerUnit }} / {{ packageType.durationType }}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -102,29 +136,44 @@ watch(
             <!-- Start : Durasi Berlangganan -->
             <div class="flex flex-col items-start space-y-3">
               <p class="text-lg font-medium">Pilih Durasi Berlangganan</p>
-              <div class="grid w-full grid-cols-2 gap-3">
-                <div class="rounded-lg bg-gray-900 py-2 text-center text-gray-600 hover:cursor-pointer">1 Bulan</div>
-                <div class="rounded-lg bg-gray-900 py-2 text-center text-gray-600 hover:cursor-pointer">2 Bulan</div>
-                <div class="rounded-lg bg-gray-900 py-2 text-center text-gray-600 hover:cursor-pointer">3 Bulan</div>
-                <div class="rounded-lg bg-gray-900 py-2 text-center text-gray-600 hover:cursor-pointer">6 Bulan</div>
-              </div>
+              <template v-if="selectedPackageType">
+                <div class="grid w-full grid-cols-2 gap-3">
+                  <div
+                    v-for="(duration, index) in selectedPackageType.durationList"
+                    :key="index"
+                    @click="selectDuration(duration)"
+                    class="rounded-lg py-2 text-center transition-all duration-200 hover:cursor-pointer"
+                    :class="
+                      duration === selectedDuration ? 'bg-lightning-yellow-400 text-black' : 'bg-gray-900 text-gray-600'
+                    "
+                  >
+                    {{ duration }} {{ selectedPackageType.durationType }}
+                  </div>
+                </div>
+              </template>
+              <template v-else>
+                <p class="w-full text-xs text-gray-500">Pilih paket untuk melihat pilihan durasi!</p>
+              </template>
             </div>
             <!-- End : Durasi Berlangganan -->
 
             <!-- Start : Total Biaya -->
             <div class="flex items-center justify-between">
               <p class="text-lg font-medium">Total Biaya</p>
-              <p class="text-lg font-medium">Rp. .... .</p>
+              <p class="text-lg font-medium">Rp. {{ totalCost }}</p>
             </div>
             <!-- End : Total Biaya -->
 
             <!-- Start : Tombol Pesan -->
             <div class="flex flex-col space-y-2">
-              <ButtonComponent variant="solid" color="lightning-yellow" class="space-x-1">
+              <ButtonComponent variant="solid" color="lightning-yellow" class="space-x-2">
                 <span>Pesan </span>
                 <WhatsAppIcon class="size-5" />
               </ButtonComponent>
-              <ButtonComponent variant="outline" color="lightning-yellow">Bagikan</ButtonComponent>
+              <ButtonComponent variant="outline" color="lightning-yellow" class="space-x-2">
+                <span>Bagikan</span>
+                <ShareIcon class="size-5" />
+              </ButtonComponent>
             </div>
             <!-- End : Tombol Pesan -->
           </div>

@@ -6,26 +6,29 @@
       {
         "name": "Bulanan",
         "price": 50000,
-        "duration": "bulan",
+        "durationType": "bulan",
         "unit": 1,
         "pricePerUnit": 50000,
-        "isBestSeller": true
+        "isBestSeller": true,
+        "durationList": [1, 2, 3, 4, 5, 6]
       },
       {
         "name": "Per 3 Bulan",
         "price": 140000,
-        "duration": "bulan",
+        "durationType": "bulan",
         "unit": 3,
         "pricePerUnit": 46667,
-        "isBestSeller": false
+        "isBestSeller": false,
+        "durationList": [3, 6, 9, 12]
       },
       {
         "name": "Per 6 Bulan",
         "price": 270000,
-        "duration": "bulan",
+        "durationType": "bulan",
         "unit": 6,
         "pricePerUnit": 45000,
-        "isBestSeller": false
+        "isBestSeller": false,
+        "durationList": [6, 12, 18]
       }
     ],
     "logo": "netflix.png"
@@ -37,26 +40,29 @@
       {
         "name": "Bulanan",
         "price": 20000,
-        "duration": "bulan",
+        "durationType": "bulan",
         "unit": 1,
         "pricePerUnit": 20000,
-        "isBestSeller": true
+        "isBestSeller": true,
+        "durationList": [1, 2, 3, 4, 5, 6]
       },
       {
         "name": "Per 3 Bulan",
         "price": 55000,
-        "duration": "bulan",
+        "durationType": "bulan",
         "unit": 3,
         "pricePerUnit": 18333,
-        "isBestSeller": false
+        "isBestSeller": false,
+        "durationList": [3, 6, 9, 12]
       },
       {
         "name": "Per 6 Bulan",
         "price": 100000,
-        "duration": "bulan",
+        "durationType": "bulan",
         "unit": 6,
         "pricePerUnit": 16667,
-        "isBestSeller": false
+        "isBestSeller": false,
+        "durationList": [6, 12, 18]
       }
     ],
     "logo": "spotify.png"
@@ -68,26 +74,29 @@
       {
         "name": "Basic",
         "price": 20000,
-        "duration": "minggu",
+        "durationType": "minggu",
         "unit": 1,
         "pricePerUnit": 20000,
-        "isBestSeller": false
+        "isBestSeller": false,
+        "durationList": [1, 2, 3, 4]
       },
       {
         "name": "Standard",
         "price": 35000,
-        "duration": "minggu",
+        "durationType": "minggu",
         "unit": 2,
         "pricePerUnit": 17500,
-        "isBestSeller": true
+        "isBestSeller": true,
+        "durationList": [2, 4, 6, 8]
       },
       {
         "name": "Premium",
         "price": 65000,
-        "duration": "minggu",
+        "durationType": "minggu",
         "unit": 4,
         "pricePerUnit": 16250,
-        "isBestSeller": false
+        "isBestSeller": false,
+        "durationList": [4, 8, 12]
       }
     ],
     "logo": "canva.png"
@@ -99,18 +108,20 @@
       {
         "name": "User Reguler",
         "price": 18000,
-        "duration": "bulan",
+        "durationType": "bulan",
         "unit": 1,
         "pricePerUnit": 18000,
-        "isBestSeller": false
+        "isBestSeller": false,
+        "durationList": [1, 2, 3, 4, 5, 6]
       },
       {
         "name": "User Premium",
         "price": 35000,
-        "duration": "bulan",
+        "durationType": "bulan",
         "unit": 1,
         "pricePerUnit": 35000,
-        "isBestSeller": true
+        "isBestSeller": true,
+        "durationList": [1, 2, 3, 4, 5, 6]
       }
     ],
     "logo": "youtube.png"
@@ -122,26 +133,29 @@
       {
         "name": "Basic",
         "price": 15000,
-        "duration": "hari",
+        "durationType": "hari",
         "unit": 7,
         "pricePerUnit": 2143,
-        "isBestSeller": false
+        "isBestSeller": false,
+        "durationList": [7, 14, 21, 28]
       },
       {
         "name": "Standard",
         "price": 30000,
-        "duration": "hari",
+        "durationType": "hari",
         "unit": 14,
         "pricePerUnit": 2143,
-        "isBestSeller": true
+        "isBestSeller": true,
+        "durationList": [14, 28, 42]
       },
       {
         "name": "Premium",
         "price": 60000,
-        "duration": "hari",
+        "durationType": "hari",
         "unit": 30,
         "pricePerUnit": 2000,
-        "isBestSeller": false
+        "isBestSeller": false,
+        "durationList": [30, 60, 90]
       }
     ],
     "logo": "disney+hotstar.png"
