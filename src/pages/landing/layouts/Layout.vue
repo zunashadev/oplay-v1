@@ -20,6 +20,7 @@ const setScrollbarWidth = (width) => {
 provide("setScrollbarWidth", setScrollbarWidth);
 // End : Cek Scrollbar
 </script>
+
 <template>
   <div class="bg-black px-4 text-white sm:px-12 md:px-20">
     <!-- Navbar -->
