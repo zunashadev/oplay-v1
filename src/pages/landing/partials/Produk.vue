@@ -87,20 +87,21 @@ const openWhatsApp = (product, packageType) => {
           <!-- App Name & Logo -->
           <div class="flex h-28 flex-col items-center justify-center space-y-2 px-2 sm:h-32 sm:space-y-4">
             <img :src="`/img/product-logos/${product.logo}`" class="max-h-8 w-auto sm:max-h-10" />
-            <p class="text-center text-base font-medium">{{ product.nama }}</p>
+            <p class="text-center text-base font-medium">{{ product.name }}</p>
           </div>
           <!-- Package Type -->
           <div
             class="from-lightning-yellow-200 to-firefly-200 border-firefly-400 flex flex-grow flex-col space-y-1.5 border-y bg-gradient-to-tl px-2 py-4 sm:space-y-2"
           >
             <div
-              v-for="(packageType, index) in product.jenisPaket"
+              v-for="(packageType, index) in product.packageTypes"
               :key="index"
               class="bg-firefly-950/50 -ml-6 flex w-full flex-col rounded-xl px-5 py-1.5 shadow-sm backdrop-blur-sm"
             >
-              <span class="text-xs font-light text-white">{{ packageType.nama }}</span>
+              <span class="text-xs font-light text-white">{{ packageType.name }}</span>
               <p class="text-base font-medium text-white">
-                Rp. {{ packageType.harga }} <span class="text-xs font-light">/{{ packageType.durasi }}</span>
+                Rp. {{ packageType.price }}
+                <span class="text-xs font-light">/ {{ packageType.unit }} {{ packageType.duration }}</span>
               </p>
             </div>
           </div>

@@ -47,7 +47,7 @@ watch(
               <img :src="`/img/product-logos/${product.logo}`" class="max-h-8 w-auto sm:max-h-10" />
             </div>
             <div class="pl-4">
-              <p class="text-xl font-semibold">{{ product.nama }}</p>
+              <p class="text-xl font-semibold">{{ product.name }}</p>
             </div>
           </div>
           <div
@@ -60,33 +60,27 @@ watch(
         <!-- End : Header -->
 
         <!-- Start : Content -->
-        <div class="flex h-[calc(100vh-124px)] w-full overflow-auto">
+        <div class="flex h-[calc(100vh-140px)] w-full overflow-auto">
           <!-- Start : Left -->
           <div class="w-full max-w-2/3 space-y-5 px-4 py-5">
             <div class="space-y-3">
               <p class="text-base font-normal">Pilih paket :</p>
               <div class="flex space-x-4">
                 <div
+                  v-for="(packageType, index) in product.packageTypes"
+                  :key="index"
                   class="from-lightning-yellow-200 to-firefly-200 outline-lightning-yellow-400 shadow-lightning-yellow-400/50 relative flex h-20 w-72 items-end justify-between rounded-lg bg-gradient-to-br px-5 py-3 text-black shadow-lg outline-2 hover:cursor-pointer"
                 >
                   <div
+                    v-if="packageType.isBestSeller"
                     class="bg-lightning-yellow-400 absolute top-2 -left-2 rounded-sm px-4 py-0.5 text-xs font-medium"
                   >
                     🔥 Terlaris
                   </div>
-                  <div class="text-lg font-medium">Per 3 Bulan</div>
+                  <div class="text-lg font-medium">{{ packageType.name }}</div>
                   <div class="flex flex-col items-end space-y-1">
-                    <p class="text-sm font-medium">Rp30.000</p>
-                    <p class="text-xs font-light">Rp30.000 / bulan</p>
-                  </div>
-                </div>
-                <div
-                  class="from-lightning-yellow-200 to-firefly-200 outline-lightning-yellow-400 relative flex h-20 w-72 items-end justify-between rounded-lg bg-gradient-to-br p-5 text-black outline-2 grayscale hover:cursor-pointer"
-                >
-                  <div class="text-lg font-medium">Per 3 Bulan</div>
-                  <div class="flex flex-col items-end space-y-1">
-                    <p class="text-sm font-medium">Rp30.000</p>
-                    <p class="text-xs font-light">Rp30.000 / bulan</p>
+                    <p class="text-sm font-medium">Rp. {{ packageType.price }}</p>
+                    <p class="text-xs font-light">Rp. {{ packageType.pricePerUnit }} / {{ packageType.duration }}</p>
                   </div>
                 </div>
               </div>

@@ -1,45 +1,129 @@
 [
   {
-    "nama": "Netflix Premium",
-    "jenisPaket": [
-      { "nama": "Basic", "harga": 15000, "durasi": "bulan" },
-      { "nama": "Standard", "harga": 30000, "durasi": "bulan" },
-      { "nama": "Premium", "harga": 60000, "durasi": "bulan" }
+    "name": "Netflix Premium",
+    "packageTypes": [
+      {
+        "name": "Bulanan",
+        "price": 50000,
+        "duration": "bulan",
+        "unit": 1,
+        "pricePerUnit": 50000,
+        "isBestSeller": true
+      },
+      {
+        "name": "Per 3 Bulan",
+        "price": 140000,
+        "duration": "bulan",
+        "unit": 3,
+        "pricePerUnit": 46667,
+        "isBestSeller": false
+      },
+      {
+        "name": "Per 6 Bulan",
+        "price": 270000,
+        "duration": "bulan",
+        "unit": 6,
+        "pricePerUnit": 45000,
+        "isBestSeller": false
+      }
     ],
     "logo": "netflix.png"
   },
   {
-    "nama": "Spotify Premium Upgrade",
-    "jenisPaket": [
-      { "nama": "Basic", "harga": 15000, "durasi": "bulan" },
-      { "nama": "Standard", "harga": 30000, "durasi": "bulan" },
-      { "nama": "Premium", "harga": 60000, "durasi": "bulan" }
+    "name": "Spotify Premium Upgrade",
+    "packageTypes": [
+      {
+        "name": "Bulanan",
+        "price": 20000,
+        "duration": "bulan",
+        "unit": 1,
+        "pricePerUnit": 20000,
+        "isBestSeller": true
+      },
+      {
+        "name": "Per 3 Bulan",
+        "price": 55000,
+        "duration": "bulan",
+        "unit": 3,
+        "pricePerUnit": 18333,
+        "isBestSeller": false
+      },
+      {
+        "name": "Per 6 Bulan",
+        "price": 100000,
+        "duration": "bulan",
+        "unit": 6,
+        "pricePerUnit": 16667,
+        "isBestSeller": false
+      }
     ],
     "logo": "spotify.png"
   },
   {
-    "nama": "Canva Pro Upgrade",
-    "jenisPaket": [
-      { "nama": "Basic", "harga": 15000, "durasi": "minggu" },
-      { "nama": "Standard", "harga": 30000, "durasi": "minggu" },
-      { "nama": "Premium", "harga": 60000, "durasi": "minggu" }
+    "name": "Canva Pro Upgrade",
+    "packageTypes": [
+      {
+        "name": "Basic",
+        "price": 20000,
+        "duration": "minggu",
+        "unit": 1,
+        "pricePerUnit": 20000,
+        "isBestSeller": false
+      },
+      {
+        "name": "Standard",
+        "price": 35000,
+        "duration": "minggu",
+        "unit": 2,
+        "pricePerUnit": 17500,
+        "isBestSeller": true
+      },
+      {
+        "name": "Premium",
+        "price": 65000,
+        "duration": "minggu",
+        "unit": 4,
+        "pricePerUnit": 16250,
+        "isBestSeller": false
+      }
     ],
     "logo": "canva.png"
   },
   {
-    "nama": "YouTube Premium",
-    "jenisPaket": [
-      { "nama": "User Reguler", "harga": 15000, "durasi": "bulan" },
-      { "nama": "User Premium", "harga": 30000, "durasi": "bulan" }
+    "name": "YouTube Premium",
+    "packageTypes": [
+      {
+        "name": "User Reguler",
+        "price": 18000,
+        "duration": "bulan",
+        "unit": 1,
+        "pricePerUnit": 18000,
+        "isBestSeller": false
+      },
+      {
+        "name": "User Premium",
+        "price": 35000,
+        "duration": "bulan",
+        "unit": 1,
+        "pricePerUnit": 35000,
+        "isBestSeller": true
+      }
     ],
     "logo": "youtube.png"
   },
   {
-    "nama": "Disney + Hotstar",
-    "jenisPaket": [
-      { "nama": "Basic", "harga": 15000, "durasi": "hari" },
-      { "nama": "Standard", "harga": 30000, "durasi": "hari" },
-      { "nama": "Premium", "harga": 60000, "durasi": "hari" }
+    "name": "Disney + Hotstar",
+    "packageTypes": [
+      { "name": "Basic", "price": 15000, "duration": "hari", "unit": 7, "pricePerUnit": 2143, "isBestSeller": false },
+      {
+        "name": "Standard",
+        "price": 30000,
+        "duration": "hari",
+        "unit": 14,
+        "pricePerUnit": 2143,
+        "isBestSeller": true
+      },
+      { "name": "Premium", "price": 60000, "duration": "hari", "unit": 30, "pricePerUnit": 2000, "isBestSeller": false }
     ],
     "logo": "disney+hotstar.png"
   }
