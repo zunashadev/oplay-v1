@@ -1,6 +1,7 @@
 [
   {
     "name": "Netflix Premium",
+    "information": "Netflix adalah layanan streaming dengan koleksi film, serial TV, dan dokumenter eksklusif. Dengan paket Netflix Premium yang kami tawarkan, Anda dapat menikmati konten dalam kualitas Ultra HD (4K) tanpa iklan. Selain itu, Anda bisa menonton di hingga 4 perangkat sekaligus, sehingga cocok untuk keluarga atau berbagi dengan teman. Dibandingkan paket reguler, Netflix Premium memberikan pengalaman menonton terbaik dengan dukungan Dolby Atmos dan HDR untuk tampilan lebih jernih dan suara lebih imersif.",
     "packageTypes": [
       {
         "name": "Bulanan",
@@ -31,6 +32,7 @@
   },
   {
     "name": "Spotify Premium Upgrade",
+    "information": "Spotify adalah platform streaming musik terbesar dengan jutaan lagu dan podcast dari seluruh dunia. Dengan paket Spotify Premium yang kami tawarkan, Anda dapat menikmati musik tanpa iklan, kualitas suara lebih jernih (hingga 320 kbps), dan fitur unduhan untuk mendengarkan secara offline. Berbeda dari akun gratis, versi premium memungkinkan Anda melewati lagu tanpa batas, membuat playlist tanpa gangguan, dan mendengarkan lagu sesuai urutan yang Anda inginkan tanpa mode shuffle paksa.",
     "packageTypes": [
       {
         "name": "Bulanan",
@@ -61,6 +63,7 @@
   },
   {
     "name": "Canva Pro Upgrade",
+    "information": "Canva adalah platform desain grafis yang mudah digunakan untuk membuat berbagai materi visual seperti poster, presentasi, media sosial, dan lainnya. Dengan Canva Pro, Anda mendapatkan akses ke jutaan elemen premium, template eksklusif, fitur hapus background otomatis, serta kemampuan untuk menyimpan desain dengan kualitas tinggi tanpa watermark. Upgrade ke Canva Pro memudahkan pekerjaan desain tanpa batasan fitur yang ada pada versi gratis.",
     "packageTypes": [
       {
         "name": "Basic",
@@ -91,6 +94,7 @@
   },
   {
     "name": "YouTube Premium",
+    "information": "YouTube Premium adalah layanan berlangganan yang memberikan pengalaman menonton bebas iklan, pemutaran di latar belakang, dan fitur unduhan video. Dengan paket premium ini, Anda juga mendapatkan akses ke YouTube Music, sehingga Anda bisa menikmati musik tanpa gangguan. Dibandingkan akun gratis, YouTube Premium membuat aktivitas menonton lebih nyaman tanpa interupsi iklan yang mengganggu.",
     "packageTypes": [
       {
         "name": "User Reguler",
@@ -113,8 +117,16 @@
   },
   {
     "name": "Disney + Hotstar",
+    "information": "Disney+ Hotstar adalah layanan streaming yang menghadirkan film dan serial dari Disney, Pixar, Marvel, Star Wars, dan National Geographic. Dengan paket premium, Anda bisa menikmati konten eksklusif dalam kualitas HD, menonton tanpa iklan, serta akses ke rilis terbaru yang tidak tersedia di layanan gratis. Berbeda dengan akun standar, Disney+ Hotstar Premium menawarkan lebih banyak pilihan tayangan dengan pengalaman sinematik terbaik.",
     "packageTypes": [
-      { "name": "Basic", "price": 15000, "duration": "hari", "unit": 7, "pricePerUnit": 2143, "isBestSeller": false },
+      {
+        "name": "Basic",
+        "price": 15000,
+        "duration": "hari",
+        "unit": 7,
+        "pricePerUnit": 2143,
+        "isBestSeller": false
+      },
       {
         "name": "Standard",
         "price": 30000,
@@ -123,7 +135,14 @@
         "pricePerUnit": 2143,
         "isBestSeller": true
       },
-      { "name": "Premium", "price": 60000, "duration": "hari", "unit": 30, "pricePerUnit": 2000, "isBestSeller": false }
+      {
+        "name": "Premium",
+        "price": 60000,
+        "duration": "hari",
+        "unit": 30,
+        "pricePerUnit": 2000,
+        "isBestSeller": false
+      }
     ],
     "logo": "disney+hotstar.png"
   }

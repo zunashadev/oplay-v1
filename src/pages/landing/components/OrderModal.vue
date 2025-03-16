@@ -5,6 +5,7 @@ import BaseModalComponent from "../../../components/modals/BaseModal.vue";
 import ButtonComponent from "../../../components/buttons/Button.vue";
 
 import CrossSmallIcon from "../../../components/icons/CrossSmall.vue";
+import WhatsAppIcon from "../../../components/icons/social-media/WhatsApp.vue";
 
 const baseModalRef = ref(null);
 
@@ -66,29 +67,7 @@ watch(
             <div class="bg-blue-charcoal-950 space-y-3 rounded-lg px-4 py-5">
               <p class="text-lg font-medium">Informasi</p>
               <p class="text-base font-normal">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci architecto necessitatibus nam, itaque
-                consequatur, magni quisquam dolorem minus facilis alias rerum eum ipsum repellat nobis animi, quam
-                recusandae. Quo reiciendis quis maxime temporibus ab debitis nemo nostrum a alias aliquid deleniti
-                pariatur molestias, explicabo, sapiente amet repudiandae sit? Quae earum expedita dolores? Animi illum
-                quasi minus beatae in earum iusto tempore, accusamus cum consequatur porro maxime quo fugit. Vero
-                molestiae, natus autem quisquam recusandae qui cupiditate sapiente quasi quae eius voluptatem
-                repellendus eos, pariatur et? Eligendi natus vel illo obcaecati. Ratione totam fugiat non quod
-                perferendis laborum obcaecati delectus sunt. Illo alias odio mollitia quaerat, aliquam et eum voluptatum
-                earum sapiente laboriosam veritatis, ad laudantium repudiandae. Id doloribus quis adipisci in ab veniam
-                incidunt eaque cupiditate minima dolor beatae quam, pariatur commodi fugiat quas molestiae nobis eius
-                distinctio hic? Optio perspiciatis dicta itaque quas dolor dolore, deserunt molestias odit sequi quam
-                excepturi, molestiae possimus dolorem. Reiciendis voluptatum iste consectetur recusandae, voluptate id
-                nobis est? Sapiente minus quod quibusdam, totam accusantium commodi ratione repudiandae. Fuga
-                exercitationem debitis laudantium rem totam labore nobis officiis delectus in. Iure laboriosam
-                praesentium aliquam quam accusamus repudiandae illo quae quidem sit distinctio perspiciatis rem quod
-                consectetur ut corrupti modi optio, corporis, quo laborum ad temporibus ipsa! Aliquam quam modi et,
-                iusto provident ipsa cum veniam sit similique laboriosam minus quae, optio pariatur ex assumenda fugiat
-                cupiditate asperiores, sapiente qui sint quas. Modi, adipisci ipsa dolor placeat provident libero neque
-                commodi non nesciunt corporis ad cum sed quia veniam sapiente, asperiores unde, voluptas expedita optio
-                blanditiis officia corrupti dicta! Repudiandae labore, asperiores vel consequatur, ratione voluptatum
-                adipisci maxime in soluta excepturi numquam, molestias expedita quam obcaecati non iusto error at!
-                Excepturi et dolores aliquam error exercitationem quis expedita dicta similique itaque animi vero soluta
-                eveniet, possimus accusamus.
+                {{ product.information }}
               </p>
             </div>
           </div>
@@ -141,7 +120,10 @@ watch(
 
             <!-- Start : Tombol Pesan -->
             <div class="flex flex-col space-y-2">
-              <ButtonComponent variant="solid" color="lightning-yellow">Pesan</ButtonComponent>
+              <ButtonComponent variant="solid" color="lightning-yellow" class="space-x-1">
+                <span>Pesan </span>
+                <WhatsAppIcon class="size-5" />
+              </ButtonComponent>
               <ButtonComponent variant="outline" color="lightning-yellow">Bagikan</ButtonComponent>
             </div>
             <!-- End : Tombol Pesan -->
