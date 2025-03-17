@@ -96,7 +96,7 @@ const totalCost = computed(() => {
           <div class="w-full px-3 py-5 sm:max-w-2/3 sm:px-4">
             <div class="bg-blue-charcoal-950 space-y-3 rounded-lg px-4 py-5">
               <p class="text-lg font-medium">Informasi</p>
-              <p class="text-base font-normal">
+              <p class="text-sm font-normal sm:text-base">
                 {{ product.information }}
               </p>
             </div>
