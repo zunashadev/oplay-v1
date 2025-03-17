@@ -108,7 +108,7 @@ const openWhatsApp = (product, packageType) => {
 
           <!-- Order Button -->
           <div class="p-3">
-            <ButtonComponent color="firefly" fullWidth @click="openOrderModal(product)">Pesan</ButtonComponent>
+            <ButtonComponent color="lightning-yellow" fullWidth @click="openOrderModal(product)">Pesan</ButtonComponent>
           </div>
         </div>
       </div>
