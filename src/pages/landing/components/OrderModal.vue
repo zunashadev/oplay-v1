@@ -93,7 +93,7 @@ const totalCost = computed(() => {
         <!-- Start : Content -->
         <div class="flex h-[calc(100vh-140px)] w-full flex-col overflow-auto sm:flex-row">
           <!-- Start : Left -->
-          <div class="w-full px-2 py-5 sm:max-w-2/3 sm:px-4">
+          <div class="w-full px-3 py-5 sm:max-w-2/3 sm:px-4">
             <div class="bg-blue-charcoal-950 space-y-3 rounded-lg px-4 py-5">
               <p class="text-lg font-medium">Informasi</p>
               <p class="text-base font-normal">
@@ -103,7 +103,7 @@ const totalCost = computed(() => {
           </div>
           <!-- End : Left -->
           <!-- Start : Right -->
-          <div class="w-full space-y-5 px-2 py-5 sm:max-w-1/3 sm:px-4">
+          <div class="w-full space-y-5 px-3 py-5 sm:max-w-1/3 sm:px-4">
             <!-- Start : Daftar Paket -->
             <div class="space-y-3">
               <p class="text-base font-normal">Pilih paket :</p>
