@@ -78,7 +78,7 @@ const totalCost = computed(() => {
               <img :src="`/img/product-logos/${product.logo}`" class="max-h-8 w-auto sm:max-h-10" />
             </div>
             <div class="pl-4">
-              <p class="text-xl font-semibold">{{ product.name }}</p>
+              <p class="text-base font-semibold sm:text-xl">{{ product.name }}</p>
             </div>
           </div>
           <div
