@@ -15,6 +15,9 @@ function openModal() {
 }
 
 function closeModal() {
+  selectedDuration.value = null;
+  selectedPackageType.value = null;
+
   baseModalRef.value.closeModal();
 }
 
@@ -102,6 +105,7 @@ const totalCost = computed(() => {
             </div>
           </div>
           <!-- End : Left -->
+
           <!-- Start : Right -->
           <div class="w-full space-y-5 px-3 py-5 sm:max-w-1/3 sm:px-4">
             <!-- Start : Daftar Paket -->
