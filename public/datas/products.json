@@ -14,19 +14,19 @@
       },
       {
         "name": "Per 3 Bulan",
-        "price": 140000,
+        "price": 135000,
         "durationType": "bulan",
         "unit": 3,
-        "pricePerUnit": 46667,
+        "pricePerUnit": 45000,
         "isBestSeller": false,
         "durationList": [3, 6, 9, 12]
       },
       {
         "name": "Per 6 Bulan",
-        "price": 270000,
+        "price": 240000,
         "durationType": "bulan",
         "unit": 6,
-        "pricePerUnit": 45000,
+        "pricePerUnit": 40000,
         "isBestSeller": false,
         "durationList": [6, 12, 18]
       }
@@ -48,19 +48,19 @@
       },
       {
         "name": "Per 3 Bulan",
-        "price": 55000,
+        "price": 45000,
         "durationType": "bulan",
         "unit": 3,
-        "pricePerUnit": 18333,
+        "pricePerUnit": 15000,
         "isBestSeller": false,
         "durationList": [3, 6, 9, 12]
       },
       {
         "name": "Per 6 Bulan",
-        "price": 100000,
+        "price": 60000,
         "durationType": "bulan",
         "unit": 6,
-        "pricePerUnit": 16667,
+        "pricePerUnit": 10000,
         "isBestSeller": false,
         "durationList": [6, 12, 18]
       }
@@ -72,7 +72,7 @@
     "information": "Canva adalah platform desain grafis yang mudah digunakan untuk membuat berbagai materi visual seperti poster, presentasi, media sosial, dan lainnya. Dengan Canva Pro, Anda mendapatkan akses ke jutaan elemen premium, template eksklusif, fitur hapus background otomatis, serta kemampuan untuk menyimpan desain dengan kualitas tinggi tanpa watermark. Upgrade ke Canva Pro memudahkan pekerjaan desain tanpa batasan fitur yang ada pada versi gratis.",
     "packageTypes": [
       {
-        "name": "Basic",
+        "name": "Mingguan",
         "price": 20000,
         "durationType": "minggu",
         "unit": 1,
@@ -81,20 +81,20 @@
         "durationList": [1, 2, 3, 4]
       },
       {
-        "name": "Standard",
-        "price": 35000,
+        "name": "Per 2 Minggu",
+        "price": 30000,
         "durationType": "minggu",
         "unit": 2,
-        "pricePerUnit": 17500,
+        "pricePerUnit": 15000,
         "isBestSeller": true,
         "durationList": [2, 4, 6, 8]
       },
       {
-        "name": "Premium",
-        "price": 65000,
+        "name": "Per 4 Minggu",
+        "price": 40000,
         "durationType": "minggu",
         "unit": 4,
-        "pricePerUnit": 16250,
+        "pricePerUnit": 10000,
         "isBestSeller": false,
         "durationList": [4, 8, 12]
       }
@@ -132,28 +132,28 @@
     "packageTypes": [
       {
         "name": "Basic",
-        "price": 15000,
+        "price": 35000,
         "durationType": "hari",
         "unit": 7,
-        "pricePerUnit": 2143,
+        "pricePerUnit": 5000,
         "isBestSeller": false,
         "durationList": [7, 14, 21, 28]
       },
       {
         "name": "Standard",
-        "price": 30000,
+        "price": 56000,
         "durationType": "hari",
         "unit": 14,
-        "pricePerUnit": 2143,
+        "pricePerUnit": 4000,
         "isBestSeller": true,
         "durationList": [14, 28, 42]
       },
       {
         "name": "Premium",
-        "price": 60000,
+        "price": 75000,
         "durationType": "hari",
         "unit": 30,
-        "pricePerUnit": 2000,
+        "pricePerUnit": 2500,
         "isBestSeller": false,
         "durationList": [30, 60, 90]
       }
